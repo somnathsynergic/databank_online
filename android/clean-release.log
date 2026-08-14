@@ -1,0 +1,587 @@
+
+F:\somnath\data_bank_mobile_api\android>if "Windows_NT" == "Windows_NT" setlocal
+
+F:\somnath\data_bank_mobile_api\android>set DIRNAME=F:\somnath\data_bank_mobile_api\android\ 
+
+F:\somnath\data_bank_mobile_api\android>if "F:\somnath\data_bank_mobile_api\android\" == "" set DIRNAME=. 
+
+F:\somnath\data_bank_mobile_api\android>set APP_BASE_NAME=gradlew 
+
+F:\somnath\data_bank_mobile_api\android>set APP_HOME=F:\somnath\data_bank_mobile_api\android\ 
+
+F:\somnath\data_bank_mobile_api\android>for %i in ("F:\somnath\data_bank_mobile_api\android\") do set APP_HOME=%~fi 
+
+F:\somnath\data_bank_mobile_api\android>set APP_HOME=F:\somnath\data_bank_mobile_api\android\ 
+
+F:\somnath\data_bank_mobile_api\android>set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m" 
+
+F:\somnath\data_bank_mobile_api\android>if defined JAVA_HOME goto findJavaFromJavaHome 
+
+F:\somnath\data_bank_mobile_api\android>set JAVA_HOME=C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\ 
+
+F:\somnath\data_bank_mobile_api\android>set JAVA_EXE=C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\/bin/java.exe 
+
+F:\somnath\data_bank_mobile_api\android>if exist "C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\/bin/java.exe" goto execute 
+
+F:\somnath\data_bank_mobile_api\android>set CLASSPATH=F:\somnath\data_bank_mobile_api\android\\gradle\wrapper\gradle-wrapper.jar 
+
+F:\somnath\data_bank_mobile_api\android>"C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\/bin/java.exe" "-Xmx64m" "-Xms64m"   "-Dorg.gradle.appname=gradlew" -classpath "F:\somnath\data_bank_mobile_api\android\\gradle\wrapper\gradle-wrapper.jar" org.gradle.wrapper.GradleWrapperMain clean assembleRelease --no-daemon 
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/8.0.1/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+> Task :gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:inspectClassesForKotlinIC UP-TO-DATE
+
+> Configure project :app
+Unable to initialize metrics, ensure C:\Users\User\.android is writable, details: C:\Users\User\.android\analytics.settings (Access is denied)
+
+> Task :app:clean
+> Task :lottie-react-native:clean
+> Task :react-native-ble-manager:clean
+> Task :react-native-bluetooth-escpos-printer:clean
+> Task :react-native-community_netinfo:clean
+> Task :react-native-config:clean
+> Task :react-native-device-info:clean
+> Task :react-native-linear-gradient:clean
+> Task :react-native-permissions:clean
+> Task :react-native-razorpay:clean
+> Task :react-native-safe-area-context:clean
+> Task :react-native-screens:clean
+> Task :react-native-vector-icons:clean
+> Task :react-native-community_netinfo:preBuild UP-TO-DATE
+> Task :react-native-community_netinfo:preReleaseBuild UP-TO-DATE
+> Task :react-native-community_netinfo:compileReleaseAidl NO-SOURCE
+> Task :react-native-community_netinfo:mergeReleaseJniLibFolders
+> Task :react-native-community_netinfo:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-community_netinfo:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-community_netinfo:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-community_netinfo:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-community_netinfo:generateReleaseResValues
+> Task :react-native-community_netinfo:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-community_netinfo:generateReleaseBuildConfig
+> Task :react-native-community_netinfo:generateReleaseResources
+> Task :react-native-community_netinfo:packageReleaseResources
+> Task :react-native-community_netinfo:javaPreCompileRelease
+> Task :react-native-community_netinfo:mergeReleaseShaders
+> Task :react-native-community_netinfo:compileReleaseShaders NO-SOURCE
+> Task :react-native-community_netinfo:generateReleaseAssets UP-TO-DATE
+> Task :react-native-community_netinfo:packageReleaseAssets
+> Task :react-native-community_netinfo:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-community_netinfo:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-community_netinfo:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-community_netinfo:processReleaseJavaRes NO-SOURCE
+> Task :react-native-community_netinfo:writeReleaseAarMetadata
+> Task :lottie-react-native:preBuild UP-TO-DATE
+> Task :lottie-react-native:preReleaseBuild UP-TO-DATE
+> Task :react-native-community_netinfo:parseReleaseLocalResources
+> Task :lottie-react-native:compileReleaseAidl NO-SOURCE
+> Task :lottie-react-native:mergeReleaseJniLibFolders
+> Task :lottie-react-native:mergeReleaseNativeLibs NO-SOURCE
+> Task :lottie-react-native:stripReleaseDebugSymbols NO-SOURCE
+> Task :lottie-react-native:copyReleaseJniLibsProjectAndLocalJars
+> Task :lottie-react-native:compileReleaseRenderscript NO-SOURCE
+> Task :lottie-react-native:generateReleaseResValues
+> Task :lottie-react-native:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lottie-react-native:generateReleaseBuildConfig
+> Task :lottie-react-native:generateReleaseResources
+> Task :lottie-react-native:packageReleaseResources
+> Task :lottie-react-native:parseReleaseLocalResources
+> Task :lottie-react-native:javaPreCompileRelease
+> Task :react-native-community_netinfo:mergeReleaseJavaResource
+
+> Task :react-native-community_netinfo:processReleaseManifest
+package="com.reactnativecommunity.netinfo" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\@react-native-community\netinfo\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :lottie-react-native:processReleaseManifest
+package="com.airbnb.android.react.lottie" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\lottie-react-native\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :lottie-react-native:mergeReleaseShaders
+> Task :react-native-community_netinfo:generateReleaseRFile
+> Task :lottie-react-native:generateReleaseRFile
+> Task :react-native-community_netinfo:extractReleaseAnnotations
+
+> Task :react-native-community_netinfo:compileReleaseJavaWithJavac
+
+> Task :react-native-community_netinfo:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-community_netinfo:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-community_netinfo:syncReleaseLibJars
+> Task :react-native-community_netinfo:bundleReleaseLocalLintAar
+> Task :lottie-react-native:compileReleaseShaders NO-SOURCE
+> Task :lottie-react-native:generateReleaseAssets UP-TO-DATE
+> Task :lottie-react-native:packageReleaseAssets
+> Task :lottie-react-native:packageReleaseRenderscript NO-SOURCE
+> Task :lottie-react-native:prepareLintJarForPublish UP-TO-DATE
+> Task :lottie-react-native:prepareReleaseArtProfile UP-TO-DATE
+> Task :lottie-react-native:processReleaseJavaRes NO-SOURCE
+> Task :react-native-ble-manager:preBuild UP-TO-DATE
+> Task :react-native-ble-manager:preReleaseBuild UP-TO-DATE
+> Task :lottie-react-native:writeReleaseAarMetadata
+> Task :react-native-ble-manager:compileReleaseAidl NO-SOURCE
+> Task :react-native-ble-manager:mergeReleaseJniLibFolders
+> Task :react-native-ble-manager:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-ble-manager:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-ble-manager:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-ble-manager:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-ble-manager:generateReleaseResValues
+> Task :react-native-ble-manager:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-ble-manager:generateReleaseBuildConfig
+> Task :react-native-ble-manager:generateReleaseResources
+> Task :react-native-ble-manager:packageReleaseResources
+> Task :react-native-ble-manager:parseReleaseLocalResources
+> Task :react-native-ble-manager:javaPreCompileRelease
+> Task :react-native-ble-manager:mergeReleaseShaders
+> Task :react-native-ble-manager:compileReleaseShaders NO-SOURCE
+> Task :react-native-ble-manager:generateReleaseAssets UP-TO-DATE
+> Task :react-native-ble-manager:packageReleaseAssets
+> Task :react-native-ble-manager:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-ble-manager:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-ble-manager:prepareReleaseArtProfile UP-TO-DATE
+
+> Task :react-native-ble-manager:processReleaseManifest
+package="it.innove" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-ble-manager\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-ble-manager:processReleaseJavaRes NO-SOURCE
+> Task :react-native-ble-manager:mergeReleaseJavaResource
+> Task :react-native-bluetooth-escpos-printer:preBuild UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:preReleaseBuild UP-TO-DATE
+> Task :react-native-ble-manager:writeReleaseAarMetadata
+> Task :react-native-bluetooth-escpos-printer:compileReleaseAidl NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseJniLibFolders
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-bluetooth-escpos-printer:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseResValues
+> Task :react-native-bluetooth-escpos-printer:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-ble-manager:generateReleaseRFile
+> Task :react-native-bluetooth-escpos-printer:generateReleaseBuildConfig
+> Task :react-native-ble-manager:extractReleaseAnnotations
+
+> Task :lottie-react-native:compileReleaseKotlin
+'compileReleaseJavaWithJavac' task (current target is 11) and 'compileReleaseKotlin' task (current target is 1.8) jvm target compatibility should be set to the same Java version.
+Could not perform incremental compilation: Could not connect to Kotlin compile daemon
+Could not connect to kotlin daemon. Using fallback strategy.
+
+> Task :react-native-ble-manager:compileReleaseJavaWithJavac
+
+> Task :react-native-ble-manager:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-ble-manager:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-ble-manager:syncReleaseLibJars
+> Task :react-native-ble-manager:bundleReleaseLocalLintAar
+> Task :react-native-bluetooth-escpos-printer:generateReleaseResources
+> Task :react-native-bluetooth-escpos-printer:packageReleaseResources
+> Task :react-native-bluetooth-escpos-printer:parseReleaseLocalResources
+> Task :react-native-bluetooth-escpos-printer:javaPreCompileRelease
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseShaders
+> Task :react-native-bluetooth-escpos-printer:compileReleaseShaders NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseAssets UP-TO-DATE
+
+> Task :react-native-bluetooth-escpos-printer:processReleaseManifest
+package="cn.jystudio.bluetooth" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-bluetooth-escpos-printer\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-bluetooth-escpos-printer:packageReleaseAssets
+> Task :react-native-bluetooth-escpos-printer:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:processReleaseJavaRes NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseJavaResource
+> Task :react-native-config:preBuild UP-TO-DATE
+> Task :react-native-config:preReleaseBuild UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:writeReleaseAarMetadata
+> Task :react-native-config:compileReleaseAidl NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseRFile
+> Task :react-native-config:mergeReleaseJniLibFolders
+> Task :react-native-bluetooth-escpos-printer:extractReleaseAnnotations
+
+> Task :react-native-bluetooth-escpos-printer:compileReleaseJavaWithJavac
+
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:syncReleaseLibJars
+> Task :react-native-bluetooth-escpos-printer:bundleReleaseLocalLintAar
+> Task :react-native-config:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-config:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-config:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-config:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-config:generateReleaseResValues
+> Task :react-native-config:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-config:generateReleaseBuildConfig
+> Task :react-native-config:generateReleaseResources
+> Task :react-native-config:packageReleaseResources
+> Task :react-native-config:parseReleaseLocalResources
+> Task :react-native-config:javaPreCompileRelease
+> Task :react-native-config:mergeReleaseShaders
+
+> Task :react-native-config:processReleaseManifest
+package="com.lugg.RNCConfig" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-config\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-config:compileReleaseShaders NO-SOURCE
+> Task :react-native-config:generateReleaseAssets UP-TO-DATE
+> Task :react-native-config:packageReleaseAssets
+> Task :react-native-config:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-config:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-config:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-config:processReleaseJavaRes NO-SOURCE
+> Task :react-native-config:writeReleaseAarMetadata
+> Task :react-native-device-info:preBuild UP-TO-DATE
+> Task :react-native-device-info:preReleaseBuild UP-TO-DATE
+> Task :react-native-device-info:compileReleaseAidl NO-SOURCE
+> Task :react-native-config:generateReleaseRFile
+> Task :react-native-config:mergeReleaseJavaResource
+> Task :react-native-device-info:mergeReleaseJniLibFolders
+> Task :react-native-config:extractReleaseAnnotations
+> Task :react-native-config:compileReleaseJavaWithJavac
+> Task :react-native-config:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-config:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-config:syncReleaseLibJars
+> Task :react-native-config:bundleReleaseLocalLintAar
+> Task :react-native-device-info:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-device-info:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-device-info:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-device-info:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-device-info:generateReleaseResValues
+> Task :react-native-device-info:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-device-info:generateReleaseBuildConfig
+> Task :react-native-device-info:generateReleaseResources
+> Task :react-native-device-info:packageReleaseResources
+> Task :react-native-device-info:parseReleaseLocalResources
+> Task :react-native-device-info:mergeReleaseShaders
+> Task :react-native-device-info:compileReleaseShaders NO-SOURCE
+> Task :react-native-device-info:generateReleaseAssets UP-TO-DATE
+> Task :react-native-device-info:packageReleaseAssets
+> Task :react-native-device-info:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-device-info:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-device-info:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-device-info:processReleaseJavaRes NO-SOURCE
+> Task :react-native-device-info:mergeReleaseJavaResource
+> Task :react-native-device-info:writeReleaseAarMetadata
+> Task :react-native-linear-gradient:preBuild UP-TO-DATE
+> Task :react-native-linear-gradient:preReleaseBuild UP-TO-DATE
+> Task :react-native-linear-gradient:compileReleaseAidl NO-SOURCE
+> Task :react-native-device-info:javaPreCompileRelease
+> Task :react-native-linear-gradient:mergeReleaseJniLibFolders
+> Task :react-native-linear-gradient:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-linear-gradient:stripReleaseDebugSymbols NO-SOURCE
+
+> Task :react-native-device-info:processReleaseManifest
+package="com.learnium.RNDeviceInfo" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-device-info\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-linear-gradient:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-linear-gradient:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-linear-gradient:generateReleaseResValues
+> Task :react-native-linear-gradient:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-linear-gradient:generateReleaseBuildConfig
+> Task :react-native-linear-gradient:generateReleaseResources
+> Task :react-native-linear-gradient:packageReleaseResources
+> Task :react-native-linear-gradient:parseReleaseLocalResources
+> Task :react-native-linear-gradient:javaPreCompileRelease
+> Task :react-native-device-info:generateReleaseRFile
+
+> Task :react-native-linear-gradient:processReleaseManifest
+package="com.BV.LinearGradient" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-linear-gradient\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-device-info:extractReleaseAnnotations
+
+> Task :react-native-device-info:compileReleaseJavaWithJavac
+
+> Task :react-native-device-info:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-device-info:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-device-info:syncReleaseLibJars
+> Task :react-native-device-info:bundleReleaseLocalLintAar
+> Task :react-native-linear-gradient:mergeReleaseShaders
+> Task :react-native-linear-gradient:compileReleaseShaders NO-SOURCE
+> Task :react-native-linear-gradient:generateReleaseRFile
+> Task :react-native-linear-gradient:generateReleaseAssets UP-TO-DATE
+> Task :react-native-linear-gradient:extractReleaseAnnotations
+> Task :react-native-linear-gradient:compileReleaseJavaWithJavac
+> Task :react-native-linear-gradient:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-linear-gradient:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-linear-gradient:packageReleaseAssets
+> Task :react-native-linear-gradient:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-linear-gradient:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-linear-gradient:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-linear-gradient:processReleaseJavaRes NO-SOURCE
+> Task :react-native-permissions:preBuild UP-TO-DATE
+> Task :react-native-permissions:preReleaseBuild UP-TO-DATE
+> Task :react-native-linear-gradient:writeReleaseAarMetadata
+> Task :react-native-linear-gradient:mergeReleaseJavaResource
+> Task :react-native-permissions:compileReleaseAidl NO-SOURCE
+> Task :react-native-linear-gradient:syncReleaseLibJars
+> Task :react-native-linear-gradient:bundleReleaseLocalLintAar
+> Task :react-native-permissions:mergeReleaseJniLibFolders
+> Task :react-native-permissions:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-permissions:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-permissions:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-permissions:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-permissions:generateReleaseResValues
+> Task :react-native-permissions:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-permissions:generateReleaseBuildConfig
+> Task :react-native-permissions:generateReleaseResources
+> Task :react-native-permissions:packageReleaseResources
+> Task :react-native-permissions:parseReleaseLocalResources
+> Task :react-native-permissions:javaPreCompileRelease
+> Task :react-native-permissions:mergeReleaseShaders
+> Task :react-native-permissions:compileReleaseShaders NO-SOURCE
+> Task :react-native-permissions:generateReleaseAssets UP-TO-DATE
+
+> Task :react-native-permissions:processReleaseManifest
+package="com.zoontek.rnpermissions" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-permissions\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-permissions:packageReleaseAssets
+> Task :react-native-permissions:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-permissions:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-permissions:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-permissions:processReleaseJavaRes NO-SOURCE
+> Task :react-native-permissions:mergeReleaseJavaResource
+> Task :react-native-razorpay:preBuild UP-TO-DATE
+> Task :react-native-razorpay:preReleaseBuild UP-TO-DATE
+> Task :react-native-permissions:writeReleaseAarMetadata
+> Task :react-native-razorpay:compileReleaseAidl NO-SOURCE
+> Task :react-native-razorpay:mergeReleaseJniLibFolders
+> Task :react-native-razorpay:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-razorpay:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-razorpay:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-razorpay:generateReleaseResValues
+> Task :react-native-razorpay:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-razorpay:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-razorpay:generateReleaseBuildConfig
+> Task :react-native-razorpay:generateReleaseResources
+> Task :react-native-permissions:generateReleaseRFile
+> Task :react-native-razorpay:packageReleaseResources
+> Task :react-native-permissions:extractReleaseAnnotations
+
+> Task :react-native-permissions:compileReleaseJavaWithJavac
+
+> Task :react-native-permissions:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-permissions:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-permissions:syncReleaseLibJars
+> Task :react-native-permissions:bundleReleaseLocalLintAar
+> Task :react-native-razorpay:parseReleaseLocalResources
+
+> Task :react-native-razorpay:processReleaseManifest
+package="com.razorpay.rn" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-razorpay\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-razorpay:javaPreCompileRelease
+> Task :react-native-razorpay:mergeReleaseShaders
+> Task :react-native-razorpay:compileReleaseShaders NO-SOURCE
+> Task :react-native-razorpay:generateReleaseAssets UP-TO-DATE
+> Task :react-native-razorpay:packageReleaseAssets
+> Task :react-native-razorpay:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-razorpay:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-razorpay:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-razorpay:processReleaseJavaRes NO-SOURCE
+> Task :react-native-razorpay:writeReleaseAarMetadata
+> Task :react-native-safe-area-context:preBuild UP-TO-DATE
+> Task :react-native-safe-area-context:preReleaseBuild UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseAidl NO-SOURCE
+> Task :react-native-safe-area-context:mergeReleaseJniLibFolders
+> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-safe-area-context:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseResValues
+> Task :react-native-safe-area-context:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseBuildConfig
+> Task :react-native-safe-area-context:generateReleaseResources
+> Task :react-native-safe-area-context:packageReleaseResources
+> Task :react-native-razorpay:mergeReleaseJavaResource
+> Task :react-native-safe-area-context:parseReleaseLocalResources
+> Task :react-native-safe-area-context:javaPreCompileRelease
+
+> Task :react-native-safe-area-context:processReleaseManifest
+package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-safe-area-context:mergeReleaseShaders
+> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:packageReleaseAssets
+> Task :react-native-safe-area-context:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-safe-area-context:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-safe-area-context:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-safe-area-context:processReleaseJavaRes NO-SOURCE
+> Task :react-native-safe-area-context:writeReleaseAarMetadata
+> Task :react-native-screens:preBuild UP-TO-DATE
+> Task :react-native-screens:preReleaseBuild UP-TO-DATE
+> Task :react-native-screens:compileReleaseAidl NO-SOURCE
+> Task :react-native-screens:mergeReleaseJniLibFolders
+> Task :react-native-screens:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-screens:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-screens:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-safe-area-context:generateReleaseRFile
+> Task :react-native-razorpay:generateReleaseRFile
+> Task :react-native-razorpay:extractReleaseAnnotations
+
+> Task :react-native-safe-area-context:compileReleaseKotlin
+'compileReleaseJavaWithJavac' task (current target is 11) and 'compileReleaseKotlin' task (current target is 1.8) jvm target compatibility should be set to the same Java version.
+Could not perform incremental compilation: Could not connect to Kotlin compile daemon
+Could not connect to kotlin daemon. Using fallback strategy.
+
+> Task :react-native-razorpay:compileReleaseJavaWithJavac
+
+> Task :react-native-razorpay:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-razorpay:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-razorpay:syncReleaseLibJars
+> Task :react-native-razorpay:bundleReleaseLocalLintAar
+> Task :react-native-screens:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-screens:generateReleaseResValues
+> Task :react-native-screens:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-screens:generateReleaseBuildConfig
+> Task :react-native-screens:generateReleaseResources
+> Task :react-native-screens:packageReleaseResources
+> Task :react-native-screens:parseReleaseLocalResources
+> Task :react-native-screens:javaPreCompileRelease
+> Task :react-native-screens:mergeReleaseShaders
+
+> Task :react-native-screens:processReleaseManifest
+package="com.swmansion.rnscreens" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-screens:compileReleaseShaders NO-SOURCE
+> Task :react-native-screens:generateReleaseAssets UP-TO-DATE
+> Task :react-native-screens:packageReleaseAssets
+> Task :react-native-screens:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-screens:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-screens:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-screens:processReleaseJavaRes NO-SOURCE
+> Task :react-native-screens:writeReleaseAarMetadata
+> Task :react-native-vector-icons:preBuild UP-TO-DATE
+> Task :react-native-vector-icons:preReleaseBuild UP-TO-DATE
+> Task :react-native-vector-icons:compileReleaseAidl NO-SOURCE
+> Task :react-native-vector-icons:mergeReleaseJniLibFolders
+> Task :react-native-vector-icons:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-vector-icons:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-vector-icons:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-vector-icons:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-screens:generateReleaseRFile
+> Task :react-native-vector-icons:generateReleaseResValues
+> Task :react-native-vector-icons:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-vector-icons:generateReleaseBuildConfig
+> Task :react-native-vector-icons:generateReleaseResources
+> Task :react-native-vector-icons:packageReleaseResources
+> Task :react-native-vector-icons:parseReleaseLocalResources
+
+> Task :react-native-vector-icons:processReleaseManifest
+package="com.oblador.vectoricons" found in source AndroidManifest.xml: F:\somnath\data_bank_mobile_api\node_modules\react-native-vector-icons\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-vector-icons:generateReleaseRFile
+> Task :react-native-vector-icons:extractReleaseAnnotations
+> Task :react-native-vector-icons:javaPreCompileRelease
+
+> Task :react-native-screens:compileReleaseKotlin
+'compileReleaseJavaWithJavac' task (current target is 11) and 'compileReleaseKotlin' task (current target is 1.8) jvm target compatibility should be set to the same Java version.
+Could not perform incremental compilation: Could not connect to Kotlin compile daemon
+Could not connect to kotlin daemon. Using fallback strategy.
+
+> Task :react-native-vector-icons:compileReleaseJavaWithJavac
+
+> Task :react-native-vector-icons:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-vector-icons:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-vector-icons:mergeReleaseShaders
+> Task :react-native-vector-icons:compileReleaseShaders NO-SOURCE
+> Task :react-native-vector-icons:generateReleaseAssets UP-TO-DATE
+> Task :react-native-vector-icons:packageReleaseAssets
+> Task :react-native-vector-icons:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-vector-icons:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-vector-icons:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-vector-icons:processReleaseJavaRes NO-SOURCE
+> Task :react-native-vector-icons:mergeReleaseJavaResource
+> Task :react-native-vector-icons:syncReleaseLibJars
+> Task :react-native-vector-icons:writeReleaseAarMetadata
+> Task :react-native-vector-icons:bundleReleaseLocalLintAar
+> Task :app:buildCodegenCLI SKIPPED
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:generatePackageList
+> Task :app:preBuild
+> Task :app:preReleaseBuild
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseRenderscript NO-SOURCE
+> Task :app:generateReleaseBuildConfig
+> Task :app:javaPreCompileRelease
+> Task :app:checkReleaseAarMetadata
+
+> Task :app:createBundleReleaseJsAndAssets
+debug Reading Metro config from F:\somnath\data_bank_mobile_api\metro.config.js
+warning: the transform cache was reset.
+                Welcome to Metro v0.76.7
+              Fast - Scalable - Integrated
+
+
+
+> Task :react-native-safe-area-context:compileReleaseKotlin
+
+> Task :app:createBundleReleaseJsAndAssets FAILED
+Error: spawn EPERM
+    at ChildProcess.spawn (node:internal/child_process:421:11)
+    at spawn (node:child_process:761:9)
+    at fork (node:child_process:172:10)
+    at ChildProcessWorker.initialize (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:133:45)
+    at new ChildProcessWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:124:10)
+    at WorkerPool.createWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:44:12)
+    at new BaseWorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\base\BaseWorkerPool.js:127:27)
+    at new WorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:30:1)
+    at new Worker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\index.js:167:26)
+    at HasteMap._getWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\src\index.js:747:24)
+
+> Task :react-native-screens:compileReleaseKotlin
+w: Detected multiple Kotlin daemon sessions at build\kotlin\sessions
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/8.0.1/userguide/command_line_interface.html#sec:command_line_warnings
+269 actionable tasks: 210 executed, 59 up-to-date
+
+F:\somnath\data_bank_mobile_api\android>if 1 EQU 0 goto mainEnd 
+
+F:\somnath\data_bank_mobile_api\android>rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of 
+
+F:\somnath\data_bank_mobile_api\android>rem the _cmd.exe /c_ return code! 
+
+F:\somnath\data_bank_mobile_api\android>set EXIT_CODE=1 
+
+F:\somnath\data_bank_mobile_api\android>if 1 EQU 0 set EXIT_CODE=1 
+
+F:\somnath\data_bank_mobile_api\android>if not "" == "" exit 1 
+
+F:\somnath\data_bank_mobile_api\android>exit /b 1 

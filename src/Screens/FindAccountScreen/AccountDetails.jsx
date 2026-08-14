@@ -78,10 +78,10 @@ const AccountDetails = ({ navigation, route }) => {
       item?.acc_type == "D"
         ? "Daily"
         : item?.acc_type == "R"
-        ? "RD"
-        : item?.acc_type == "L"
-        ? "Loan"
-        : "",
+          ? "RD"
+          : item?.acc_type == "L"
+            ? "Loan"
+            : "",
     ],
     ["Account No.", item?.account_number],
     ["Name", item?.customer_name],
@@ -95,7 +95,7 @@ const AccountDetails = ({ navigation, route }) => {
         ? new Date(lastTnxDate).toLocaleDateString("en-GB")
         : "No available date",
     ],
-    ["Current Balance", item?.current_balance],
+    ["Current Balance", +item?.current_balance],
   ]
 
   const getLastTnxDate = async () => {

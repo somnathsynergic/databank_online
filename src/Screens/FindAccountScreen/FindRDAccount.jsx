@@ -49,8 +49,12 @@ const FindRDAccount = ({ navigation }) => {
   // }, [searchValue])
 
   useEffect(() => {
-    debounce(fetchBankDetails)()
-  }, [searchValue])
+    if (!searchValue) return;
+    const handler = setTimeout(() => {
+      fetchBankDetails();
+    }, 800); // debounce 800ms
+    return () => clearTimeout(handler);
+  }, [searchValue]);
 
   const fetchBankDetails = async () => {
     setIsLoading(true)
@@ -74,7 +78,7 @@ const FindRDAccount = ({ navigation }) => {
       .then(res => {
         setIsLoading(false)
 
-        console.log("bank details", res?.data?.success?.msg)
+        // console.log("bank details", res?.data?.success?.msg)
         setUserBankDetails(res?.data?.success?.msg)
       })
       .catch(err => {
@@ -111,7 +115,7 @@ const FindRDAccount = ({ navigation }) => {
           />
         )}
         <ScrollView
-          style={{ maxHeight: "60%" }}
+          style={{ maxHeight: "60%", top: 150}}
           keyboardShouldPersistTaps="handled">
           {userBankDetails &&
             userBankDetails?.map((props, index) => {
@@ -152,7 +156,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     position: "absolute",
-    bottom: 130,
+    top: 50,
     width: "100%",
     alignSelf: "center",
     borderColor: COLORS.lightScheme.primary,

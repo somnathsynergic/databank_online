@@ -2,7 +2,7 @@ import React from "react"
 import { Button, StyleSheet, Text, View } from "react-native"
 import { BluetoothEscposPrinter } from "react-native-bluetooth-escpos-printer"
 import { hsdLogo } from "./dummy-logo"
-
+import { logo } from "../../Resources/ImageStrings/logo"
 async function printreciept() {
   const columnWidths = [24, 24]
   const receiptNo = 120

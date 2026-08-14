@@ -19,3 +19,37 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'org.jetbrains.kotlin' &&
+                (details.requested.name == 'kotlin-stdlib-jre7' || details.requested.name == 'kotlin-stdlib-jre8')) {
+                details.useTarget "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
+            }
+        }
+    }
+}
+
+subprojects {
+    configurations.all {
+        resolutionStrategy {
+            force 'org.ow2.asm:asm:9.5'
+            force 'org.ow2.asm:asm-analysis:9.5'
+            force 'org.ow2.asm:asm-commons:9.5'
+            force 'org.ow2.asm:asm-util:9.5'
+            force 'org.ow2.asm:asm-tree:9.5'
+            force 'net.sf.proguard:proguard-gradle:7.4.1'
+            force 'com.google.guava:guava:33.2.1-jre'
+            force 'com.google.errorprone:error_prone_annotations:2.28.0'
+            force 'com.google.code.gson:gson:2.10.1'
+            force 'org.apache.httpcomponents.client5:httpclient5:5.3'
+            force 'org.apache.httpcomponents.core5:httpcore5:5.3'
+            force 'commons-codec:commons-codec:1.16.0'
+        }
+    }
+}

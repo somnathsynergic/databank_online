@@ -56,10 +56,10 @@ const RDAccountDetails = ({ navigation, route }) => {
       item?.acc_type == "D"
         ? "Daily"
         : item?.acc_type == "R"
-        ? "RD"
-        : item?.acc_type == "L"
-        ? "Loan"
-        : "",
+          ? "RD"
+          : item?.acc_type == "L"
+            ? "Loan"
+            : "",
     ],
     ["Account No.", item?.account_number],
     ["Name", item?.customer_name],
@@ -74,9 +74,9 @@ const RDAccountDetails = ({ navigation, route }) => {
       lastTnxDate
         ? new Date(lastTnxDate).toLocaleDateString("en-GB")
         : // ? moment.utc(lastTnxDate).format("DD/MM/YYYY HH:mm")
-          "No available date",
+        "No available date",
     ],
-    ["Current Balance", item?.current_balance],
+    ["Current Balance", +item?.current_balance],
   ]
 
   const getLastTnxDate = async () => {

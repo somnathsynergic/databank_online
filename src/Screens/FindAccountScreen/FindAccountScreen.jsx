@@ -24,12 +24,12 @@ const FindAccountScreen = ({ navigation }) => {
 
   const { userId, bankId, branchCode } = useContext(AppStore)
 
-  function handleAccountSearch() {
-    if (!searchValue) {
-      return
-    }
-    fetchBankDetails()
-  }
+  // function handleAccountSearch() {
+  //   if (!searchValue) {
+  //     return
+  //   }
+  //   fetchBankDetails()
+  // }
 
   const debounce = func => {
     let timer
@@ -50,8 +50,12 @@ const FindAccountScreen = ({ navigation }) => {
   // }, [searchValue])
 
   useEffect(() => {
-    debounce(fetchBankDetails)()
-  }, [searchValue])
+    if (!searchValue) return;
+    const handler = setTimeout(() => {
+      fetchBankDetails();
+    }, 800); // debounce 800ms
+    return () => clearTimeout(handler);
+  }, [searchValue]);
 
   const fetchBankDetails = async () => {
     setIsLoading(true)
@@ -62,9 +66,6 @@ const FindAccountScreen = ({ navigation }) => {
       account_number: searchValue,
       flag: "D",
     }
-    console.log(bankId, branchCode, userId, searchValue)
-    console.log("XXDXDXDXDXDXDXDXDXDXDXDX", userBankDetails)
-
     await axios
       .post(address.SEARCH_ACCOUNT, obj, {
         headers: {
@@ -73,13 +74,10 @@ const FindAccountScreen = ({ navigation }) => {
       })
       .then(res => {
         setIsLoading(false)
-
-        console.log("bank details", res?.data?.success?.msg)
         setUserBankDetails(res?.data?.success?.msg)
       })
       .catch(err => {
         setIsLoading(false)
-
         setUserBankDetails([])
         console.log("error: " + err?.response?.data)
       })
@@ -87,16 +85,12 @@ const FindAccountScreen = ({ navigation }) => {
 
   useFocusEffect(
     useCallback(() => {
-      // alert('Screen was focused')
       return () => {
-        // alert('Screen was unfocused')
-        // // Useful for cleanup functions
         changeSearchValue("")
         setUserBankDetails([])
       }
     }, []),
   )
-  // console.log('isLoading '+isLoading)
   return (
     <View>
       <CustomHeader />
@@ -113,11 +107,11 @@ const FindAccountScreen = ({ navigation }) => {
         )}
 
         <ScrollView
-          style={{ maxHeight: "60%" }}
+          style={{ maxHeight: "60%", top: 150}}
           keyboardShouldPersistTaps="handled">
           {userBankDetails &&
             userBankDetails?.map((props, index) => {
-              console.log("========================", props)
+              // console.log("========================", props)
               return (
                 <SearchCard
                   item={props}
@@ -154,7 +148,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     position: "absolute",
-    bottom: 130,
+    top: 50,
     width: "100%",
     alignSelf: "center",
     borderColor: COLORS.lightScheme.primary,

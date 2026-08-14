@@ -5,7 +5,7 @@ import mainNavigationRoutes from "../Routes/NavigationRoutes"
 import { icon } from "../Resources/Icons"
 
 const SearchCard = ({ item, index, navigation, flag }) => {
-  console.log("flag" + flag)
+  // console.log("flag" + flag)
   return (
     <TouchableOpacity
       onPress={() =>
@@ -13,8 +13,8 @@ const SearchCard = ({ item, index, navigation, flag }) => {
           flag == "D"
             ? mainNavigationRoutes.accountDetails
             : flag == "R"
-            ? mainNavigationRoutes.RDAccountDetails
-            : mainNavigationRoutes.loanAccountDetails,
+              ? mainNavigationRoutes.RDAccountDetails
+              : mainNavigationRoutes.loanAccountDetails,
           { item: item },
         )
       }
@@ -36,10 +36,10 @@ const SearchCard = ({ item, index, navigation, flag }) => {
           {item?.acc_type == "D"
             ? "Daily"
             : item?.acc_type == "R"
-            ? "RD"
-            : item?.acc_type == "L"
-            ? "Loan"
-            : ""}
+              ? "RD"
+              : item?.acc_type == "L"
+                ? "Loan"
+                : ""}
         </Text>
         <Text style={styles.text}>Product Code : {item?.product_code}</Text>
       </View>

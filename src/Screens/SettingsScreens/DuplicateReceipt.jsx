@@ -78,7 +78,7 @@ const DuplicateReceipt = ({ navigation }) => {
         console.log("hello")
         setIsLoading(false)
 
-        console.log("bank details", res?.data)
+        // console.log("bank details", res?.data)
         setUserBankDetails(res?.data?.success?.msg)
         if (!res?.data?.success?.msg?.length) {
           ToastAndroid.showWithGravityAndOffset(
@@ -123,7 +123,7 @@ const DuplicateReceipt = ({ navigation }) => {
         {/* Account Cards */}
 
         <ScrollView
-          style={{ maxHeight: "60%" }}
+          style={{ maxHeight: "60%", top: 220 }}
           keyboardShouldPersistTaps="handled">
           {isLoading && (
             <ActivityIndicator
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     position: "absolute",
-    bottom: 130,
+    top: 10,
     width: "100%",
     alignSelf: "center",
     borderColor: COLORS.lightScheme.primary,

@@ -1,5 +1,6 @@
 import {
   PixelRatio,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -9,10 +10,11 @@ import { icon } from "../../Resources/Icons"
 import { COLORS, colors } from "../../Resources/colors"
 import CustomHeader from "../../Components/CustomHeader"
 import mainNavigationRoutes from "../../Routes/NavigationRoutes"
+import { SCREEN_HEIGHT } from "react-native-normalize"
 
 export default function ReportChoose({ navigation }) {
   return (
-    <>
+    <ScrollView style={{height: SCREEN_HEIGHT *0.8}}>
       <CustomHeader />
       <View style={styles.container}>
         <TouchableOpacity
@@ -118,7 +120,7 @@ export default function ReportChoose({ navigation }) {
           {/* Blank Card */}
         </View>
       </View>
-    </>
+    </ScrollView>
   )
 }
 

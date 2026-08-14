@@ -6,8 +6,9 @@ import {
   ScrollView,
   RefreshControl,
   TouchableOpacity,
+  Image
 } from "react-native"
-import { StackActions, useFocusEffect } from "@react-navigation/native"
+import { useFocusEffect } from "@react-navigation/native"
 import { useState, useEffect, useContext, useCallback } from "react"
 import { BluetoothEscposPrinter } from "react-native-bluetooth-escpos-printer"
 import { icon } from "../../Resources/Icons"
@@ -21,6 +22,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import FindAccountScreen from "../FindAccountScreen/FindAccountScreen"
 import FindLoanAccountScreen from "../FindAccountScreen/FindLoanAccountScreen"
 import FindRDAccount from "../FindAccountScreen/FindRDAccount"
+import { REACT_APP_BASE_URL, IMG_URL } from "../../Config/config"
+import { getBase64FromUrl } from "../../Functions/getBase64FromUrl"
+
 mainNavigationRoutes
 // import { useIsFocused } from '@react-navigation/native';
 const Home = ({ navigation }) => {
@@ -35,6 +39,7 @@ const Home = ({ navigation }) => {
     isLoan,
     isRD,
     isDaily,
+    logo_path,
   } = useContext(AppStore)
 
   const [currentDateTime, setCurrentDateTime] = useState(new Date())
@@ -69,7 +74,7 @@ const Home = ({ navigation }) => {
     }, 2000)
   }, [])
 
-  const popAction = StackActions.popToTop()
+
 
   useFocusEffect(
     useCallback(() => {
@@ -81,7 +86,7 @@ const Home = ({ navigation }) => {
         login()
       }, 2000)
 
-      navigation.dispatch(popAction)
+      // navigation.dispatch(popAction) // removed to avoid POP_TO_TOP warning
 
       return () => {
         // alert('Screen was unfocused')
@@ -92,6 +97,22 @@ const Home = ({ navigation }) => {
 
   async function printAgentInfo() {
     try {
+      await BluetoothEscposPrinter.printerAlign(
+        BluetoothEscposPrinter.ALIGN.CENTER,
+      )
+      if (logo_path) {
+        const _imgUrl = IMG_URL + logo_path
+        const _imgBase64 = await getBase64FromUrl(_imgUrl)
+        if (_imgBase64) {
+          await BluetoothEscposPrinter.printPic(_imgBase64, {
+            width: 150,
+            align: "center",
+            left: 15,
+          })
+          await BluetoothEscposPrinter.printText("\r\n", {})
+        }
+      }
+
       await BluetoothEscposPrinter.printerAlign(
         BluetoothEscposPrinter.ALIGN.CENTER,
       )
@@ -201,7 +222,11 @@ const Home = ({ navigation }) => {
             <Text style={styles.manual}>Hello, {agentName}</Text>
           </View>
         </View>
-
+        {/* <View>
+          <Text>  {IMG_URL + logo_path}  </Text>
+                  <Image source={IMG_URL + logo_path} style={styles.image} resizeMode="contain" />
+          
+        </View> */}
         <View
           style={{
             flex: 4,
@@ -323,7 +348,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   logoContainer: {
-    flex: 2,
+    flex: 1,
     backgroundColor: COLORS.lightScheme.primary,
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
@@ -405,5 +430,9 @@ const styles = StyleSheet.create({
   },
   disabledContainer: {
     color: "gray",
+  },
+   image: {
+    width: 150,
+    height: 150,
   },
 })

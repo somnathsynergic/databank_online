@@ -145,7 +145,7 @@ const ReportType = () => {
             item.account_holder_name,
             item.deposit_amount,
           ]
-          totalDepositedAmount += item.deposit_amount
+          totalDepositedAmount += +item.deposit_amount
           console.log("ITEMMM TABLEEE=====", rowArr)
           tableData.push(...[rowArr])
         })
@@ -259,6 +259,12 @@ const ReportType = () => {
                 flex: 1,
                 backgroundColor: "#FFFFFF",
                 margin: 20,
+                borderRadius: 20,
+                elevation: 8,
+                shadowColor: "#000",
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.25,
+                shadowRadius: 4,
               }}>
               <CalendarPicker
                 width={350}
@@ -312,14 +318,14 @@ const ReportType = () => {
                 setAccountType(item.value)
                 setFocusDrop(false)
               }}
-              // renderLeftIcon={() => (
-              //   <AntDesign
-              //     style={styles.icon}
-              //     color={isFocus ? 'blue' : 'black'}
-              //     name="Safety"
-              //     size={20}
-              //   />
-              // )}
+            // renderLeftIcon={() => (
+            //   <AntDesign
+            //     style={styles.icon}
+            //     color={isFocus ? 'blue' : 'black'}
+            //     name="Safety"
+            //     size={20}
+            //   />
+            // )}
             />
           </View>
 
@@ -344,7 +350,7 @@ const ReportType = () => {
                 borderWidth: 2,
                 borderColor: COLORS.lightScheme.onTertiaryContainer,
                 borderRadius: 10,
-                
+
               }}
               style={{ backgroundColor: COLORS.lightScheme.onPrimary }}>
               <Row data={tableHead} textStyle={styles.head} />

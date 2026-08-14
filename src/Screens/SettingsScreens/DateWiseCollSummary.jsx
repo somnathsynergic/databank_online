@@ -16,9 +16,12 @@ import CustomHeader from "../../Components/CustomHeader"
 import { COLORS, colors } from "../../Resources/colors"
 import { Table, Rows, Row } from "react-native-table-component"
 import axios from "axios"
+import { IMG_URL } from "../../Config/config"
+import { getBase64FromUrl } from "../../Functions/getBase64FromUrl"
 import CalendarPicker from "react-native-calendar-picker"
 import { address } from "../../Routes/addresses"
 import { Dropdown } from "react-native-element-dropdown"
+import { SCREEN_HEIGHT } from "react-native-normalize"
 
 const DateWiseCollSummary = () => {
   const {
@@ -35,6 +38,7 @@ const DateWiseCollSummary = () => {
     totalCollection,
     login,
     id,
+    logo_path,
   } = useContext(AppStore)
 
   const [selectedStartDate, setSelectedStartDate] = useState(() => new Date())
@@ -132,7 +136,7 @@ const DateWiseCollSummary = () => {
           ]
           rcpts += item.rcpts
           setTotalReceipts(rcpts)
-          totalAmount += item.deposit_amount
+          totalAmount += +item.deposit_amount
           setTotal(totalAmount)
           console.log("ITEMMM TABLEEE=====", rowArr)
           tableData.push(...[rowArr])
@@ -174,13 +178,30 @@ const DateWiseCollSummary = () => {
 
   async function printReceipt() {
     try {
-      // await BluetoothEscposPrinter.printerAlign(
-      //   BluetoothEscposPrinter.ALIGN.CENTER,
-      // )
-      await BluetoothEscposPrinter.printText(bankName, { align: "center" })
-      await BluetoothEscposPrinter.printText("\r\n", {})
-      await BluetoothEscposPrinter.printText(branchName, { align: "center" })
-      await BluetoothEscposPrinter.printText("\r\n", {})
+      await BluetoothEscposPrinter.printerAlign(
+        BluetoothEscposPrinter.ALIGN.CENTER,
+      )
+
+      if (logo_path) {
+        const _imgUrl = IMG_URL + logo_path
+        const _imgBase64 = await getBase64FromUrl(_imgUrl)
+        if (_imgBase64) {
+          await BluetoothEscposPrinter.printPic(_imgBase64, {
+            width: 150,
+            align: "center",
+            left: 15,
+          })
+          await BluetoothEscposPrinter.printText("\r\n", {})
+        }
+      }
+
+      await BluetoothEscposPrinter.printerAlign(
+        BluetoothEscposPrinter.ALIGN.CENTER,
+      )
+      await BluetoothEscposPrinter.printText(bankName + '\r\n', { align: "center" })
+      // await BluetoothEscposPrinter.printText("\r\n", {})
+      await BluetoothEscposPrinter.printText(branchName + '\r\n', { align: "center" })
+      // await BluetoothEscposPrinter.printText("\r\n", {})
 
       await BluetoothEscposPrinter.printColumn(
         [10, 2, 18],
@@ -208,19 +229,17 @@ const DateWiseCollSummary = () => {
         {},
       )
 
-      await BluetoothEscposPrinter.printText("SUMMARY REPORT", {
+      await BluetoothEscposPrinter.printText("SUMMARY REPORT\n", {
         align: "center",
       })
 
-      await BluetoothEscposPrinter.printText("\r", {})
-
-      // await BluetoothEscposPrinter.printPic(logo, { width: 300, align: "center", left: 30 })
+      // await BluetoothEscposPrinter.printText("\r", {})
 
       await BluetoothEscposPrinter.printText(
-        "-------------------------------",
+        "-------------------------------\n",
         {},
       )
-      await BluetoothEscposPrinter.printText("\r\n", {})
+      // await BluetoothEscposPrinter.printText("\r\n", {})
 
       let columnWidthsHeader = [10, 6, 10]
       await BluetoothEscposPrinter.printColumn(
@@ -260,11 +279,11 @@ const DateWiseCollSummary = () => {
         align: "center",
       })
       await BluetoothEscposPrinter.printText(
-        "---------------X---------------",
+        "---------------X---------------\n\n",
         {},
       )
 
-      await BluetoothEscposPrinter.printText("\r\n\r\n\r\n", {})
+      // await BluetoothEscposPrinter.printText("\r\n", {})
     } catch (e) {
       console.log(e.message || "ERROR")
       // ToastAndroid.showWithGravityAndOffset(
@@ -278,7 +297,7 @@ const DateWiseCollSummary = () => {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ height: SCREEN_HEIGHT * 0.8 }}>
       <CustomHeader />
       <View
         style={{
@@ -372,14 +391,14 @@ const DateWiseCollSummary = () => {
               setAccountType(item.value)
               setFocusDrop(false)
             }}
-            // renderLeftIcon={() => (
-            //   <AntDesign
-            //     style={styles.icon}
-            //     color={isFocus ? 'blue' : 'black'}
-            //     name="Safety"
-            //     size={20}
-            //   />
-            // )}
+          // renderLeftIcon={() => (
+          //   <AntDesign
+          //     style={styles.icon}
+          //     color={isFocus ? 'blue' : 'black'}
+          //     name="Safety"
+          //     size={20}
+          //   />
+          // )}
           />
         </View>
         <View>
@@ -427,7 +446,7 @@ const DateWiseCollSummary = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ScrollView>
   )
 }
 

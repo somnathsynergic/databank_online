@@ -9,6 +9,9 @@ import {
   Alert,
   Linking,
   ActivityIndicator,
+  RefreshControl,
+  ScrollView,
+
 } from "react-native"
 import { useState, useEffect, useContext, useCallback } from "react"
 import { COLORS, colors } from "../Resources/colors"
@@ -37,18 +40,27 @@ const LogInScreen = ({ navigation }) => {
     setPasscode,
     next,
     setNext,
+    setUserId,
+    setBankId,
   } = useContext(AppStore)
 
   const [latestAppVersion, setLatestAppVersion] = useState("")
   const [appDownloadLink, setAppDownloadLink] = useState("")
   const [updateStatus, setUpdateStatus] = useState("")
   const [isDisable, setDisable] = useState(false)
+  const [dummyUser, setDummyUser] = useState("")
+  const [dummyBankId, setDummyBankId] = useState("")
+  const [refreshing, setRefreshing] = useState(false)
+
   // useEffect(() => {
   //   console.log(passcode)
   // }, [passcode])
 
   const handlePressOnFirstScreen = () => {
-    if (userId) {
+    setUserId(dummyUser)
+    setBankId(dummyBankId)
+    console.log("dummyUser", userId)
+    if (userId || dummyUser) {
       setNext(true)
     } else {
       setNext(false)
@@ -85,27 +97,36 @@ const LogInScreen = ({ navigation }) => {
       .then(res => {
         setLatestAppVersion(res.data.data.app_version)
         setAppDownloadLink(res.data.data.app_download_link)
-        console.log(
-          "fsdadgtreyhgtdhyrfujfyudx",
-          res.data.data.app_download_link,
-        )
-        console.log("fsdadgtreyhgtdhysdfsdfsdrfujfyudx", res.data)
+        // console.log(
+        //   "fsdadgtreyhgtdhyrfujfyudx",
+        //   res.data.data.app_download_link,
+        // )
+        // console.log("fsdadgtreyhgtdhysdfsdfsdrfujfyudx", res.data)
         setUpdateStatus(res.data.update_status)
 
-        if (res.data.update_status == "Y") {
-          showAlertUpdate(res.data.data.app_download_link)
-        }
+        // if (res.data.update_status == "Y") {
+        //   showAlertUpdate(res.data.data.app_download_link)
+        // }
       })
   }
-
-  useEffect(() => {
+  const handleReload = () => {
     getUserId()
+    setDummyUser(dummyUser ? dummyUser : userId)
+    setUserId(dummyUser ? dummyUser : userId)
     getVersionFromWeb()
-  }, [])
+  }
+  useEffect(() => {
+    console.log("called")
+    getUserId()
+    setDummyUser(dummyUser ? dummyUser : userId)
+    setUserId(dummyUser ? dummyUser : userId)
 
-  console.log("skahlrcnsfytkuwhnf ", version)
-  console.log("skahlrcnsfytkuwhnf ", latestAppVersion)
-  console.log("skahlrcnsfytkuwhnf ", updateStatus)
+    getVersionFromWeb()
+  }, [userId])
+
+  // console.log("version ", version)
+  // console.log("latestAppVersion ", latestAppVersion)
+  // console.log("updateStatus ", updateStatus)
 
   function showAlertUpdate(link) {
     Alert.alert("Found Update!", "Please update your app.", [
@@ -113,7 +134,6 @@ const LogInScreen = ({ navigation }) => {
     ])
   }
 
-  // 1 3 0 ========= 1 1 0
 
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.lightScheme.background }}>
@@ -126,6 +146,7 @@ const LogInScreen = ({ navigation }) => {
           <Text style={styles.manual}>Login with your pin</Text>
         </View>
       </View>
+
       <View style={styles.mainContainer}>
         <View style={styles.logINcontainer}>
           {/* Title */}
@@ -134,22 +155,34 @@ const LogInScreen = ({ navigation }) => {
           {!next && (
             <View>
               {/* DeviceId */}
-              {!userId && (
+              {/* {!userId && (
                 <InputComponent
-                  // handleChange={() => { }}
                   value={deviceId ? deviceId : "Fetching ID..."}
                   placeholder={Strings.loginPlaceHolder}
                   label={"Device ID"}
                   readOnly={true}
                 />
-              )}
+              )} */}
               {/* Agent ID */}
+              {!userId && <InputComponent
+                // handleChange={handlePressOnFirstScreen}
+                value={dummyBankId}
+                // value={userId ? userId : "Fetching ID..."}
+                placeholder={`Bank ID`}
+                label={"Bank ID"}
+                handleChange={text => { setDummyBankId(text) }}
+                // readOnly={true}
+                readOnly={userId ? true : false}
+              />}
               <InputComponent
                 // handleChange={handlePressOnFirstScreen}
-                value={userId ? userId : "Fetching ID..."}
-                placeholder={`${userId}`}
+                value={dummyUser ? dummyUser : userId}
+                // value={userId ? userId : "Fetching ID..."}
+                placeholder={`Enter Agent ID`}
                 label={"Agent ID"}
-                readOnly={true}
+                handleChange={text => { setDummyUser(text) }}
+                // readOnly={true}
+                readOnly={userId ? true : false}
               />
               {/* <InputComponent
                 // handleChange={handlePressOnFirstScreen}
@@ -161,10 +194,20 @@ const LogInScreen = ({ navigation }) => {
 
               <View style={styles.buttonContainer}>
                 <ButtonComponent
-                  disabled={updateStatus == "Y" || !userId ? true : false}
+                  // disabled={updateStatus == "Y" || !userId ? true : false}
+                  // disabled = {userId.length>0 ? false : true}
+                  // disabled={!userId ? true : false}
+                  title={"Reload"}
+                  handleOnpress={() => handleReload()}
+                  customStyle={{ width: "40%", marginTop: 10 }}
+                />
+                <ButtonComponent
+                  // disabled={updateStatus == "Y" || !userId ? true : false}
+                  // disabled = {userId.length>0 ? false : true}
+                  // disabled={!userId ? true : false}
                   title={"Next"}
                   handleOnpress={() => handlePressOnFirstScreen()}
-                  customStyle={{ width: "60%", marginTop: 10 }}
+                  customStyle={{ width: "40%", marginTop: 10 }}
                 />
               </View>
 
@@ -221,7 +264,8 @@ const LogInScreen = ({ navigation }) => {
                 onPress={() =>
                   navigation.navigate(mainNavigationRoutes.forgotPasscode)
                 }>
-                <Text style={styles.resetText}>Forgot Pin?</Text>
+                {/* <Text style={styles.resetText}>Forgot Pin? {userId} {dummyBankId}</Text> */}
+                <Text style={styles.resetText}>Forgot Pin? </Text>
               </TouchableOpacity>
               <View style={styles.buttonContainer}>
                 <CancelButtonComponent
@@ -258,6 +302,7 @@ const LogInScreen = ({ navigation }) => {
           )}
         </View>
       </View>
+
     </View>
   )
 }

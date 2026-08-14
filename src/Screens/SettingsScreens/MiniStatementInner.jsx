@@ -16,14 +16,17 @@ import CustomHeader from "../../Components/CustomHeader"
 import { COLORS } from "../../Resources/colors"
 import { Table, Rows, Row, Col } from "react-native-table-component"
 import axios from "axios"
+import { IMG_URL } from "../../Config/config"
+import { getBase64FromUrl } from "../../Functions/getBase64FromUrl"
 import CalendarPicker from "react-native-calendar-picker"
 import { address } from "../../Routes/addresses"
 import { removeIndexes } from "../../Functions/removeIndexes"
+import { SCREEN_HEIGHT } from "react-native-normalize"
 
 const MiniStatementInner = ({ route }) => {
   const { item } = route.params
   // console.log('item '+item.acc_type)
-  const { userId, bankId, branchCode, bankName, branchName, agentName } =
+  const { userId, bankId, branchCode, bankName, branchName, agentName, logo_path } =
     useContext(AppStore)
 
   const [selectedStartDate, setSelectedStartDate] = useState(() => new Date())
@@ -96,10 +99,10 @@ const MiniStatementInner = ({ route }) => {
               year: "2-digit",
             }),
             //dateFormatters(item.PAID_DT),
-            item.PAID_AMT,
-            item.BALANCE_AMT,
+            +item.PAID_AMT,
+            +item.BALANCE_AMT,
           ]
-          totalDepositedAmount += item.PAID_AMT
+          totalDepositedAmount += +item.PAID_AMT
           console.log("ITEMMM TABLEEE=====", rowArr)
           tableData.push(...[rowArr])
         })
@@ -135,10 +138,26 @@ const MiniStatementInner = ({ route }) => {
       await BluetoothEscposPrinter.printerAlign(
         BluetoothEscposPrinter.ALIGN.CENTER,
       )
-      await BluetoothEscposPrinter.printText(bankName, { align: "center" })
-      await BluetoothEscposPrinter.printText("\r\n", {})
-      await BluetoothEscposPrinter.printText(branchName, { align: "center" })
-      await BluetoothEscposPrinter.printText("\r\n", {})
+      if (logo_path) {
+        const _imgUrl = IMG_URL + logo_path
+        const _imgBase64 = await getBase64FromUrl(_imgUrl)
+        if (_imgBase64) {
+          await BluetoothEscposPrinter.printPic(_imgBase64, {
+            width: 150,
+            align: "center",
+            left: 15,
+          })
+          await BluetoothEscposPrinter.printText("\r\n", {})
+        }
+      }
+
+      await BluetoothEscposPrinter.printerAlign(
+        BluetoothEscposPrinter.ALIGN.CENTER,
+      )
+      await BluetoothEscposPrinter.printText(bankName + '\r\n', { align: "center" })
+      // await BluetoothEscposPrinter.printText("\r\n", {})
+      await BluetoothEscposPrinter.printText(branchName + '\r\n', { align: "center" })
+      // await BluetoothEscposPrinter.printText("\r\n", {})
       await BluetoothEscposPrinter.printColumn(
         [10, 2, 18],
         [
@@ -200,56 +219,53 @@ const MiniStatementInner = ({ route }) => {
         align: "center",
       })
 
-      // await BluetoothEscposPrinter.printText(`FROM: ${new Date(startDate).toLocaleDateString("en-GB", {day: "2-digit", month: "2-digit", year: "2-digit"})}  TO: ${new Date(endDate).toLocaleDateString("en-GB", {day: "2-digit", month: "2-digit", year: "2-digit"})}`, {
-      //   align: "center",
-      // })
-
-      await BluetoothEscposPrinter.printText("\r", {})
-
-      // await BluetoothEscposPrinter.printPic(logo, { width: 300, align: "center", left: 30 })
-
       await BluetoothEscposPrinter.printText(
         "-------------------------------",
         {},
       )
-      await BluetoothEscposPrinter.printText("\r\n", {})
+      // await BluetoothEscposPrinter.printText("\r\n", {})
 
-      let columnWidthsHeader = [10, 10, 10]
-      await BluetoothEscposPrinter.printColumn(
-        columnWidthsHeader,
-        [
-          BluetoothEscposPrinter.ALIGN.CENTER,
-          BluetoothEscposPrinter.ALIGN.CENTER,
-          BluetoothEscposPrinter.ALIGN.CENTER,
-        ],
-        ["Date", "Coll Amt", "Cls Bal"],
-        {},
-      )
+    let columnWidthsHeader = [10, 10, 10]
+await BluetoothEscposPrinter.printColumn(
+  columnWidthsHeader,
+  [
+    BluetoothEscposPrinter.ALIGN.CENTER,
+    BluetoothEscposPrinter.ALIGN.CENTER,
+    BluetoothEscposPrinter.ALIGN.CENTER,
+  ],
+  ["Date", "Coll Amt", "Cls Bal"],
+  {},
+)
 
-      const copiedTableData = [...tableData]
-      console.log("TABLLLELEEEEE DDDAAATAAAA  CPPPYYY ", copiedTableData)
+const copiedTableData = [...tableData]
+console.log("TABLE DATA COPY", copiedTableData)
 
-      let columnWidthsBody = [30]
-      copiedTableData.forEach(async item => {
-        let newItems = [...item]
-        console.log("new itemsssssss", newItems)
-        const updatedItems = removeIndexes(newItems, [0])
+// Use the SAME column widths as the header
+let columnWidthsBody = [10, 10, 10]
 
-        // updatedItems[2] = updatedItems[2].slice(0, 8)
-        let items = updatedItems.join("     ")
-        console.log("++==++ PRINTED ITEM", items)
-        await BluetoothEscposPrinter.printColumn(
-          columnWidthsBody,
-          [BluetoothEscposPrinter.ALIGN.CENTER],
-          [items.toString()],
-          {},
-        )
-      })
+copiedTableData.forEach(async item => {
+  let newItems = [...item]
+  console.log("new items", newItems)
+  
+  const updatedItems = removeIndexes(newItems, [0])
+  const stringItems = updatedItems.map(val => val.toString())
+  // Pass the array directly to printColumn (not joined into one string)
+  await BluetoothEscposPrinter.printColumn(
+    columnWidthsBody,
+    [
+      BluetoothEscposPrinter.ALIGN.CENTER,
+      BluetoothEscposPrinter.ALIGN.CENTER,
+      BluetoothEscposPrinter.ALIGN.CENTER,
+    ],
+    stringItems, // Pass array, not joined string
+    {},
+  )
+})
 
-      await BluetoothEscposPrinter.printText(
-        "-------------------------------\n",
-        {},
-      )
+await BluetoothEscposPrinter.printText(
+  "-------------------------------\n",
+  {},
+)
 
       await BluetoothEscposPrinter.printText(
         `TOTAL AMOUNT: ${totalAmount}\r\n`,
@@ -260,11 +276,11 @@ const MiniStatementInner = ({ route }) => {
       // await BluetoothEscposPrinter.printText("Total Receipts: " + totalReceipts + "\n", { align: "center" })
       // await BluetoothEscposPrinter.printText("Total Amount: " + total + "\n", { align: "center" })
       await BluetoothEscposPrinter.printText(
-        "---------------X---------------",
+        "---------------X---------------\n\n",
         {},
       )
 
-      await BluetoothEscposPrinter.printText("\r\n\r\n\r\n", {})
+      // await BluetoothEscposPrinter.printText("\r\n", {})
     } catch (e) {
       console.log(e.message || "ERROR")
       ToastAndroid.showWithGravityAndOffset(
@@ -288,7 +304,7 @@ const MiniStatementInner = ({ route }) => {
 
   console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<", tableData)
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ height: SCREEN_HEIGHT * 0.8 }}>
       <CustomHeader />
       <View
         style={{
@@ -401,7 +417,7 @@ const MiniStatementInner = ({ route }) => {
           <Text style={styles.btnLabel}>PRINT</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   )
 }
 

@@ -1,0 +1,8 @@
+gradle.beforeProject { project ->
+    project.plugins.withId("com.facebook.react") {
+        def react = project.extensions.findByName("react")
+        if (react != null && react.hasProperty("extraPackagerArgs")) {
+            react.extraPackagerArgs.addAll(["--max-workers", "1"])
+        }
+    }
+}

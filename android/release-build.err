@@ -1,0 +1,31 @@
+Failed to construct transformer:  Error: spawn EPERM
+    at ChildProcess.spawn (node:internal/child_process:421:11)
+    at spawn (node:child_process:761:9)
+    at fork (node:child_process:172:10)
+    at ChildProcessWorker.initialize (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:133:45)
+    at new ChildProcessWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:124:10)
+    at WorkerPool.createWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:44:12)
+    at new BaseWorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\base\BaseWorkerPool.js:127:27)
+    at new WorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:30:1)
+    at new Worker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\index.js:167:26)
+    at HasteMap._getWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\src\index.js:747:24) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'spawn'
+}
+error spawn EPERM
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:createBundleReleaseJsAndAssets'.
+> Process 'command 'cmd'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2m 52s

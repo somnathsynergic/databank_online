@@ -20,7 +20,7 @@ const BottomNavigation = () => {
   return (
     <>
       <Tab.Navigator
-        screenOptions={{
+         screenOptions={{
           tabBarStyle: {
             backgroundColor: COLORS.lightScheme.onPrimary,
             borderTopLeftRadius: 20,
@@ -30,7 +30,8 @@ const BottomNavigation = () => {
           tabBarInactiveTintColor: COLORS.lightScheme.onSurface,
           tabBarShowLabel: false,
           tabBarHideOnKeyboard: true,
-        }}>
+        }}
+        >
         <Tab.Screen
           name={"Home_Navigator"}
           options={{

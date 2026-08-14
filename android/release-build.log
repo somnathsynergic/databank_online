@@ -1,0 +1,492 @@
+
+F:\somnath\data_bank_mobile_api\android>if "Windows_NT" == "Windows_NT" setlocal
+
+F:\somnath\data_bank_mobile_api\android>set DIRNAME=F:\somnath\data_bank_mobile_api\android\ 
+
+F:\somnath\data_bank_mobile_api\android>if "F:\somnath\data_bank_mobile_api\android\" == "" set DIRNAME=. 
+
+F:\somnath\data_bank_mobile_api\android>set APP_BASE_NAME=gradlew 
+
+F:\somnath\data_bank_mobile_api\android>set APP_HOME=F:\somnath\data_bank_mobile_api\android\ 
+
+F:\somnath\data_bank_mobile_api\android>for %i in ("F:\somnath\data_bank_mobile_api\android\") do set APP_HOME=%~fi 
+
+F:\somnath\data_bank_mobile_api\android>set APP_HOME=F:\somnath\data_bank_mobile_api\android\ 
+
+F:\somnath\data_bank_mobile_api\android>set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m" 
+
+F:\somnath\data_bank_mobile_api\android>if defined JAVA_HOME goto findJavaFromJavaHome 
+
+F:\somnath\data_bank_mobile_api\android>set JAVA_HOME=C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\ 
+
+F:\somnath\data_bank_mobile_api\android>set JAVA_EXE=C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\/bin/java.exe 
+
+F:\somnath\data_bank_mobile_api\android>if exist "C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\/bin/java.exe" goto execute 
+
+F:\somnath\data_bank_mobile_api\android>set CLASSPATH=F:\somnath\data_bank_mobile_api\android\\gradle\wrapper\gradle-wrapper.jar 
+
+F:\somnath\data_bank_mobile_api\android>"C:\Program Files\OpenLogic\jdk-17.0.7.7-hotspot\/bin/java.exe" "-Xmx64m" "-Xms64m"   "-Dorg.gradle.appname=gradlew" -classpath "F:\somnath\data_bank_mobile_api\android\\gradle\wrapper\gradle-wrapper.jar" org.gradle.wrapper.GradleWrapperMain assembleRelease 
+Starting a Gradle Daemon, 2 busy Daemons could not be reused, use --status for details
+> Task :gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:inspectClassesForKotlinIC UP-TO-DATE
+
+> Configure project :app
+Unable to initialize metrics, ensure C:\Users\User\.android is writable, details: C:\Users\User\.android\analytics.settings (Access is denied)
+
+> Task :react-native-community_netinfo:preBuild UP-TO-DATE
+> Task :react-native-community_netinfo:preReleaseBuild UP-TO-DATE
+> Task :react-native-community_netinfo:compileReleaseAidl NO-SOURCE
+> Task :react-native-community_netinfo:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-community_netinfo:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-community_netinfo:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-community_netinfo:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-community_netinfo:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-community_netinfo:generateReleaseResValues UP-TO-DATE
+> Task :react-native-community_netinfo:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-community_netinfo:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-community_netinfo:generateReleaseResources UP-TO-DATE
+> Task :react-native-community_netinfo:packageReleaseResources UP-TO-DATE
+> Task :react-native-community_netinfo:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-community_netinfo:processReleaseManifest UP-TO-DATE
+> Task :react-native-community_netinfo:generateReleaseRFile UP-TO-DATE
+> Task :react-native-community_netinfo:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-community_netinfo:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-community_netinfo:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-community_netinfo:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-community_netinfo:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-community_netinfo:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-community_netinfo:compileReleaseShaders NO-SOURCE
+> Task :react-native-community_netinfo:generateReleaseAssets UP-TO-DATE
+> Task :react-native-community_netinfo:packageReleaseAssets UP-TO-DATE
+> Task :react-native-community_netinfo:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-community_netinfo:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-community_netinfo:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-community_netinfo:processReleaseJavaRes NO-SOURCE
+> Task :react-native-community_netinfo:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-community_netinfo:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-community_netinfo:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-community_netinfo:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :lottie-react-native:preBuild UP-TO-DATE
+> Task :lottie-react-native:preReleaseBuild UP-TO-DATE
+> Task :lottie-react-native:compileReleaseAidl NO-SOURCE
+> Task :lottie-react-native:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :lottie-react-native:mergeReleaseNativeLibs NO-SOURCE
+> Task :lottie-react-native:stripReleaseDebugSymbols NO-SOURCE
+> Task :lottie-react-native:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :lottie-react-native:compileReleaseRenderscript NO-SOURCE
+> Task :lottie-react-native:generateReleaseResValues UP-TO-DATE
+> Task :lottie-react-native:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lottie-react-native:generateReleaseBuildConfig UP-TO-DATE
+> Task :lottie-react-native:generateReleaseResources UP-TO-DATE
+> Task :lottie-react-native:packageReleaseResources UP-TO-DATE
+> Task :lottie-react-native:parseReleaseLocalResources UP-TO-DATE
+> Task :lottie-react-native:processReleaseManifest UP-TO-DATE
+> Task :lottie-react-native:generateReleaseRFile UP-TO-DATE
+> Task :lottie-react-native:compileReleaseKotlin UP-TO-DATE
+> Task :lottie-react-native:extractReleaseAnnotations UP-TO-DATE
+> Task :lottie-react-native:javaPreCompileRelease UP-TO-DATE
+> Task :lottie-react-native:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :lottie-react-native:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :lottie-react-native:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lottie-react-native:mergeReleaseShaders UP-TO-DATE
+> Task :lottie-react-native:compileReleaseShaders NO-SOURCE
+> Task :lottie-react-native:generateReleaseAssets UP-TO-DATE
+> Task :lottie-react-native:packageReleaseAssets UP-TO-DATE
+> Task :lottie-react-native:packageReleaseRenderscript NO-SOURCE
+> Task :lottie-react-native:prepareLintJarForPublish UP-TO-DATE
+> Task :lottie-react-native:prepareReleaseArtProfile UP-TO-DATE
+> Task :lottie-react-native:processReleaseJavaRes NO-SOURCE
+> Task :lottie-react-native:mergeReleaseJavaResource UP-TO-DATE
+> Task :lottie-react-native:syncReleaseLibJars UP-TO-DATE
+> Task :lottie-react-native:writeReleaseAarMetadata UP-TO-DATE
+> Task :lottie-react-native:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-ble-manager:preBuild UP-TO-DATE
+> Task :react-native-ble-manager:preReleaseBuild UP-TO-DATE
+> Task :react-native-ble-manager:compileReleaseAidl NO-SOURCE
+> Task :react-native-ble-manager:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-ble-manager:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-ble-manager:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-ble-manager:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-ble-manager:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-ble-manager:generateReleaseResValues UP-TO-DATE
+> Task :react-native-ble-manager:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-ble-manager:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-ble-manager:generateReleaseResources UP-TO-DATE
+> Task :react-native-ble-manager:packageReleaseResources UP-TO-DATE
+> Task :react-native-ble-manager:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-ble-manager:processReleaseManifest UP-TO-DATE
+> Task :react-native-ble-manager:generateReleaseRFile UP-TO-DATE
+> Task :react-native-ble-manager:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-ble-manager:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-ble-manager:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-ble-manager:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-ble-manager:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-ble-manager:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-ble-manager:compileReleaseShaders NO-SOURCE
+> Task :react-native-ble-manager:generateReleaseAssets UP-TO-DATE
+> Task :react-native-ble-manager:packageReleaseAssets UP-TO-DATE
+> Task :react-native-ble-manager:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-ble-manager:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-ble-manager:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-ble-manager:processReleaseJavaRes NO-SOURCE
+> Task :react-native-ble-manager:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-ble-manager:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-ble-manager:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-ble-manager:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:preBuild UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:preReleaseBuild UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:compileReleaseAidl NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseResValues UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseResources UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:packageReleaseResources UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:processReleaseManifest UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseRFile UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:compileReleaseShaders NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:generateReleaseAssets UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:packageReleaseAssets UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:processReleaseJavaRes NO-SOURCE
+> Task :react-native-bluetooth-escpos-printer:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-bluetooth-escpos-printer:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-config:preBuild UP-TO-DATE
+> Task :react-native-config:preReleaseBuild UP-TO-DATE
+> Task :react-native-config:compileReleaseAidl NO-SOURCE
+> Task :react-native-config:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-config:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-config:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-config:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-config:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-config:generateReleaseResValues UP-TO-DATE
+> Task :react-native-config:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-config:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-config:generateReleaseResources UP-TO-DATE
+> Task :react-native-config:packageReleaseResources UP-TO-DATE
+> Task :react-native-config:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-config:processReleaseManifest UP-TO-DATE
+> Task :react-native-config:generateReleaseRFile UP-TO-DATE
+> Task :react-native-config:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-config:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-config:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-config:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-config:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-config:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-config:compileReleaseShaders NO-SOURCE
+> Task :react-native-config:generateReleaseAssets UP-TO-DATE
+> Task :react-native-config:packageReleaseAssets UP-TO-DATE
+> Task :react-native-config:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-config:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-config:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-config:processReleaseJavaRes NO-SOURCE
+> Task :react-native-config:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-config:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-config:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-config:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-device-info:preBuild UP-TO-DATE
+> Task :react-native-device-info:preReleaseBuild UP-TO-DATE
+> Task :react-native-device-info:compileReleaseAidl NO-SOURCE
+> Task :react-native-device-info:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-device-info:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-device-info:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-device-info:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-device-info:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-device-info:generateReleaseResValues UP-TO-DATE
+> Task :react-native-device-info:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-device-info:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-device-info:generateReleaseResources UP-TO-DATE
+> Task :react-native-device-info:packageReleaseResources UP-TO-DATE
+> Task :react-native-device-info:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-device-info:processReleaseManifest UP-TO-DATE
+> Task :react-native-device-info:generateReleaseRFile UP-TO-DATE
+> Task :react-native-device-info:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-device-info:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-device-info:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-device-info:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-device-info:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-device-info:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-device-info:compileReleaseShaders NO-SOURCE
+> Task :react-native-device-info:generateReleaseAssets UP-TO-DATE
+> Task :react-native-device-info:packageReleaseAssets UP-TO-DATE
+> Task :react-native-device-info:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-device-info:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-device-info:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-device-info:processReleaseJavaRes NO-SOURCE
+> Task :react-native-device-info:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-device-info:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-device-info:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-device-info:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-linear-gradient:preBuild UP-TO-DATE
+> Task :react-native-linear-gradient:preReleaseBuild UP-TO-DATE
+> Task :react-native-linear-gradient:compileReleaseAidl NO-SOURCE
+> Task :react-native-linear-gradient:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-linear-gradient:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-linear-gradient:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-linear-gradient:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-linear-gradient:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-linear-gradient:generateReleaseResValues UP-TO-DATE
+> Task :react-native-linear-gradient:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-linear-gradient:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-linear-gradient:generateReleaseResources UP-TO-DATE
+> Task :react-native-linear-gradient:packageReleaseResources UP-TO-DATE
+> Task :react-native-linear-gradient:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-linear-gradient:processReleaseManifest UP-TO-DATE
+> Task :react-native-linear-gradient:generateReleaseRFile UP-TO-DATE
+> Task :react-native-linear-gradient:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-linear-gradient:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-linear-gradient:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-linear-gradient:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-linear-gradient:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-linear-gradient:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-linear-gradient:compileReleaseShaders NO-SOURCE
+> Task :react-native-linear-gradient:generateReleaseAssets UP-TO-DATE
+> Task :react-native-linear-gradient:packageReleaseAssets UP-TO-DATE
+> Task :react-native-linear-gradient:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-linear-gradient:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-linear-gradient:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-linear-gradient:processReleaseJavaRes NO-SOURCE
+> Task :react-native-linear-gradient:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-linear-gradient:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-linear-gradient:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-linear-gradient:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-permissions:preBuild UP-TO-DATE
+> Task :react-native-permissions:preReleaseBuild UP-TO-DATE
+> Task :react-native-permissions:compileReleaseAidl NO-SOURCE
+> Task :react-native-permissions:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-permissions:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-permissions:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-permissions:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-permissions:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-permissions:generateReleaseResValues UP-TO-DATE
+> Task :react-native-permissions:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-permissions:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-permissions:generateReleaseResources UP-TO-DATE
+> Task :react-native-permissions:packageReleaseResources UP-TO-DATE
+> Task :react-native-permissions:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-permissions:processReleaseManifest UP-TO-DATE
+> Task :react-native-permissions:generateReleaseRFile UP-TO-DATE
+> Task :react-native-permissions:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-permissions:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-permissions:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-permissions:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-permissions:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-permissions:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-permissions:compileReleaseShaders NO-SOURCE
+> Task :react-native-permissions:generateReleaseAssets UP-TO-DATE
+> Task :react-native-permissions:packageReleaseAssets UP-TO-DATE
+> Task :react-native-permissions:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-permissions:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-permissions:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-permissions:processReleaseJavaRes NO-SOURCE
+> Task :react-native-permissions:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-permissions:syncReleaseLibJars UP-TO-DATE
+> Task :react-native-permissions:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-permissions:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :react-native-razorpay:preBuild UP-TO-DATE
+> Task :react-native-razorpay:preReleaseBuild UP-TO-DATE
+> Task :react-native-razorpay:compileReleaseAidl NO-SOURCE
+> Task :react-native-razorpay:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-razorpay:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-razorpay:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-razorpay:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-razorpay:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-razorpay:generateReleaseResValues UP-TO-DATE
+> Task :react-native-razorpay:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-razorpay:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-razorpay:generateReleaseResources UP-TO-DATE
+> Task :react-native-razorpay:packageReleaseResources UP-TO-DATE
+> Task :react-native-razorpay:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-razorpay:processReleaseManifest UP-TO-DATE
+> Task :react-native-razorpay:generateReleaseRFile UP-TO-DATE
+> Task :react-native-razorpay:extractReleaseAnnotations
+> Task :react-native-razorpay:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-razorpay:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-razorpay:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-razorpay:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-razorpay:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-razorpay:compileReleaseShaders NO-SOURCE
+> Task :react-native-razorpay:generateReleaseAssets UP-TO-DATE
+> Task :react-native-razorpay:packageReleaseAssets UP-TO-DATE
+> Task :react-native-razorpay:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-razorpay:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-razorpay:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-razorpay:processReleaseJavaRes NO-SOURCE
+> Task :react-native-razorpay:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-safe-area-context:preBuild UP-TO-DATE
+> Task :react-native-safe-area-context:preReleaseBuild UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseAidl NO-SOURCE
+> Task :react-native-safe-area-context:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-safe-area-context:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseResValues UP-TO-DATE
+> Task :react-native-safe-area-context:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-safe-area-context:packageReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-safe-area-context:processReleaseManifest UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseRFile UP-TO-DATE
+> Task :react-native-razorpay:mergeReleaseJavaResource
+> Task :react-native-safe-area-context:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-razorpay:syncReleaseLibJars
+> Task :react-native-razorpay:bundleReleaseLocalLintAar
+> Task :react-native-safe-area-context:extractReleaseAnnotations
+> Task :react-native-safe-area-context:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:packageReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-safe-area-context:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-safe-area-context:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-safe-area-context:processReleaseJavaRes NO-SOURCE
+> Task :react-native-safe-area-context:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-screens:preBuild UP-TO-DATE
+> Task :react-native-screens:preReleaseBuild UP-TO-DATE
+> Task :react-native-screens:compileReleaseAidl NO-SOURCE
+> Task :react-native-screens:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-screens:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-screens:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-screens:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-screens:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-screens:generateReleaseResValues UP-TO-DATE
+> Task :react-native-screens:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-screens:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-screens:generateReleaseResources UP-TO-DATE
+> Task :react-native-screens:packageReleaseResources UP-TO-DATE
+> Task :react-native-screens:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-screens:processReleaseManifest UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseJavaResource
+> Task :react-native-screens:generateReleaseRFile UP-TO-DATE
+> Task :react-native-safe-area-context:syncReleaseLibJars
+> Task :react-native-safe-area-context:bundleReleaseLocalLintAar
+> Task :react-native-screens:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-screens:extractReleaseAnnotations
+> Task :react-native-screens:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-screens:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-screens:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-screens:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-screens:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-screens:compileReleaseShaders NO-SOURCE
+> Task :react-native-screens:generateReleaseAssets UP-TO-DATE
+> Task :react-native-screens:packageReleaseAssets UP-TO-DATE
+> Task :react-native-screens:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-screens:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-screens:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-screens:processReleaseJavaRes NO-SOURCE
+> Task :react-native-screens:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-vector-icons:preBuild UP-TO-DATE
+> Task :react-native-vector-icons:preReleaseBuild UP-TO-DATE
+> Task :react-native-vector-icons:compileReleaseAidl NO-SOURCE
+> Task :react-native-vector-icons:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-vector-icons:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-vector-icons:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-vector-icons:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-vector-icons:compileReleaseRenderscript NO-SOURCE
+> Task :react-native-vector-icons:generateReleaseResValues UP-TO-DATE
+> Task :react-native-vector-icons:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-vector-icons:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-vector-icons:generateReleaseResources UP-TO-DATE
+> Task :react-native-vector-icons:packageReleaseResources UP-TO-DATE
+> Task :react-native-vector-icons:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-vector-icons:processReleaseManifest UP-TO-DATE
+> Task :react-native-vector-icons:generateReleaseRFile UP-TO-DATE
+> Task :react-native-vector-icons:extractReleaseAnnotations
+> Task :react-native-vector-icons:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-screens:mergeReleaseJavaResource
+> Task :react-native-vector-icons:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-screens:syncReleaseLibJars
+> Task :react-native-screens:bundleReleaseLocalLintAar
+> Task :react-native-vector-icons:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-vector-icons:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-vector-icons:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-vector-icons:compileReleaseShaders NO-SOURCE
+> Task :react-native-vector-icons:generateReleaseAssets UP-TO-DATE
+> Task :react-native-vector-icons:packageReleaseAssets UP-TO-DATE
+> Task :react-native-vector-icons:packageReleaseRenderscript NO-SOURCE
+> Task :react-native-vector-icons:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-vector-icons:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-vector-icons:processReleaseJavaRes NO-SOURCE
+> Task :react-native-vector-icons:writeReleaseAarMetadata UP-TO-DATE
+> Task :app:buildCodegenCLI SKIPPED
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :react-native-vector-icons:mergeReleaseJavaResource
+> Task :app:generatePackageList
+> Task :react-native-vector-icons:syncReleaseLibJars
+> Task :react-native-vector-icons:bundleReleaseLocalLintAar
+> Task :app:preBuild
+> Task :app:preReleaseBuild
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseRenderscript NO-SOURCE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+
+> Task :app:createBundleReleaseJsAndAssets
+debug Reading Metro config from F:\somnath\data_bank_mobile_api\metro.config.js
+warning: the transform cache was reset.
+                Welcome to Metro v0.76.7
+              Fast - Scalable - Integrated
+
+
+Error: spawn EPERM
+    at ChildProcess.spawn (node:internal/child_process:421:11)
+    at spawn (node:child_process:761:9)
+    at fork (node:child_process:172:10)
+    at ChildProcessWorker.initialize (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:133:45)
+    at new ChildProcessWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:124:10)
+    at WorkerPool.createWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:44:12)
+    at new BaseWorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\base\BaseWorkerPool.js:127:27)
+    at new WorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:30:1)
+    at new Worker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\index.js:167:26)
+    at HasteMap._getWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\src\index.js:747:24)
+
+> Task :app:createBundleReleaseJsAndAssets FAILED
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/8.0.1/userguide/command_line_interface.html#sec:command_line_warnings
+277 actionable tasks: 21 executed, 256 up-to-date
+
+F:\somnath\data_bank_mobile_api\android>if 1 EQU 0 goto mainEnd 
+
+F:\somnath\data_bank_mobile_api\android>rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of 
+
+F:\somnath\data_bank_mobile_api\android>rem the _cmd.exe /c_ return code! 
+
+F:\somnath\data_bank_mobile_api\android>set EXIT_CODE=1 
+
+F:\somnath\data_bank_mobile_api\android>if 1 EQU 0 set EXIT_CODE=1 
+
+F:\somnath\data_bank_mobile_api\android>if not "" == "" exit 1 
+
+F:\somnath\data_bank_mobile_api\android>exit /b 1 

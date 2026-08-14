@@ -75,7 +75,7 @@ const MiniStatement = ({ navigation, item }) => {
       .then(res => {
         setIsLoading(false)
 
-        console.log("bank details", res?.data)
+        // console.log("bank details", res?.data)
         setUserBankDetails(res?.data?.success?.msg)
         if (res.data.length == 0)
           ToastAndroid.showWithGravityAndOffset(
@@ -117,7 +117,7 @@ const MiniStatement = ({ navigation, item }) => {
           />
         )}
         <ScrollView
-          style={{ maxHeight: "60%" }}
+          style={{ maxHeight: "60%", top: 220 }}
           keyboardShouldPersistTaps="handled">
           {userBankDetails &&
             userBankDetails?.map((props, index) => {
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     position: "absolute",
-    bottom: 130,
+    top: 20,
     width: "100%",
     alignSelf: "center",
     borderColor: COLORS.lightScheme.primary,

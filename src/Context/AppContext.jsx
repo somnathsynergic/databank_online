@@ -25,11 +25,12 @@ const AppContext = ({ children }) => {
   const [receiptNumber, setReceiptNumber] = useState(() => 0)
   // const [holidayLock, setHolidayLock] = useState(() => 0)
   const [maximumAmount, setMaximumAmount] = useState(() => 0)
+  const [logo_path,setLogoPath] = useState(() => "")
 
   // allow_collection_days
   const [allowCollectionDays, setAllowCollectionDays] = useState(() => 0)
   const [secAmtType, setSecAmtType] = useState(() => "")
-
+  const [printOp, setPrintOp] = useState(false)
   const [modifiedAt, setModifiedAt] = useState(() => new Date())
   const [transDt, setTransDt] = useState(() => new Date())
   const [isDaily, setisDaily] = useState(false)
@@ -49,9 +50,9 @@ const AppContext = ({ children }) => {
   useEffect(() => {
     const uniqueId = DeviceInfo.getUniqueIdSync()
     setDeviceID(uniqueId)
-    console.log("UniqueID: ", uniqueId)
-    console.log("DeviceID: ", deviceId)
-    console.log("==========||||||| fdjgh")
+    // console.log("UniqueID: ", uniqueId)
+    // console.log("DeviceID: ", deviceId)
+    // console.log("==========||||||| fdjgh")
   }, [])
 
   const login = async () => {
@@ -59,6 +60,7 @@ const AppContext = ({ children }) => {
       device_id: deviceId,
       user_id: userId,
       password: passcode,
+      bank_id: bankId,
     }
 
     console.log("OBJJJJJJ===>", obj)
@@ -69,6 +71,8 @@ const AppContext = ({ children }) => {
         },
       })
       .then(res => {
+        console.log('resssssssssssssssssssssssss', res?.data)
+        console.log(res?.data?.success?.logo_path)
         if (res?.data?.status) {
           setIsLogin(true)
           // console.log('modified_dt '+new Date(res.data.success.setting.msg[0].modified_at))
@@ -83,6 +87,8 @@ const AppContext = ({ children }) => {
           setBranchName(res?.data?.success?.user_data?.msg[0]?.branch_name)
           setBranchCode(res?.data?.success?.user_data?.msg[0]?.branch_code)
           setMaximumAmount(res?.data?.success?.user_data?.msg[0]?.max_amt)
+          setPrintOp(res?.data?.success?.user_data?.msg[0]?.print_opt)
+          setLogoPath(res?.data?.success?.logo_path)
           setIsLoan(
             res?.data?.success?.bank_acc_type[0]?.loan_flag == "Y"
               ? true
@@ -105,7 +111,7 @@ const AppContext = ({ children }) => {
           setSecAmtType(res?.data?.success?.user_data?.msg[0]?.sec_amt_type)
 
           setTotalCollection(
-            res?.data?.success?.total_collection?.msg[0]?.total_collection,
+            +res?.data?.success?.total_collection?.msg[0]?.total_collection,
           )
 
           setReceiptNumber(res?.data?.success?.setting?.msg[0]?.receipt_no)
@@ -134,7 +140,7 @@ const AppContext = ({ children }) => {
         }
       })
       .catch(err => {
-        console.error("========>>>>>>>>", err?.response?.data)
+        console.error("========>>>>>>>>", err)
         setIsLogin(false)
         setPasscode("")
         ToastAndroid.showWithGravityAndOffset(
@@ -148,13 +154,13 @@ const AppContext = ({ children }) => {
       })
   }
 
-  console.log("dtdtdtdt", transDt, transDt)
+  // console.log("dtdtdtdt", transDt, transDt)
 
   const nowDate = async () => {
     await axios
       .get(address.NOW_DATE)
       .then(res => {
-        console.log("NOW DATE FROM SERVER: ", new Date(res?.data?.now_date))
+        // console.log("NOW DATE FROM SERVER: ", new Date(res?.data?.now_date))
         setTodayDateFromServer(new Date(res?.data?.now_date))
       })
       .catch(err => {
@@ -183,10 +189,12 @@ const AppContext = ({ children }) => {
         },
       })
       .then(res => {
-        console.log("User ID: ", res?.data?.success?.msg[0]?.user_id)
-        setUserId(res?.data?.success?.msg[0]?.user_id)
+        console.log("Res : ", res?.data)
+        // console.log("User ID: ", res?.data?.success?.msg[0]?.user_id)
+        setUserId(res?.data?.success?.msg?.[0]?.user_id)
       })
       .catch(err => {
+        console.log("Error fetching details", err?.data?.message)
         ToastAndroid.showWithGravityAndOffset(
           "Error fetching details",
           ToastAndroid.SHORT,
@@ -209,8 +217,8 @@ const AppContext = ({ children }) => {
       .then(res => {
         setCollectionFlag(res?.data?.data?.msg[0]?.coll_flag)
         setEndFlag(res?.data?.data?.msg[0]?.end_flag)
-        console.log("FLAGGGGGSSSS CF: ", res?.data?.data?.msg[0]?.coll_flag)
-        console.log("FLAGGGGGSSSS EF: ", res?.data?.data?.msg[0]?.end_flag)
+        // console.log("FLAGGGGGSSSS CF: ", res?.data?.data?.msg[0]?.coll_flag)
+        // console.log("FLAGGGGGSSSS EF: ", res?.data?.data?.msg[0]?.end_flag)
       })
       .catch(err => {
         console.log("flags err", err)
@@ -234,7 +242,7 @@ const AppContext = ({ children }) => {
         },
       })
       .then(res => {
-        console.log(res?.data?.success?.msg[0]?.deposit_amount)
+        // console.log(res?.data?.success?.msg[0]?.deposit_amount)
         setTotalDepositedAmount(res?.data?.success?.msg[0]?.deposit_amount)
       })
   }
@@ -267,6 +275,7 @@ const AppContext = ({ children }) => {
         next,
         setNext,
         bankId,
+        setBankId,
         bankName,
         branchName,
         branchCode,
@@ -287,7 +296,10 @@ const AppContext = ({ children }) => {
         isLoan,
         isRD,
         transDt,
+        printOp,
+        setUserId,
         setTotalCollection,
+        logo_path
       }}>
       {children}
     </AppStore.Provider>

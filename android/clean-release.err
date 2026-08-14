@@ -1,0 +1,293 @@
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+e: java.nio.file.AccessDeniedException: C:\Users\User\AppData\Local\kotlin\daemon\kotlin-daemon-client-tsmarker10437938223914484041.tmp
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: F:\somnath\data_bank_mobile_api\node_modules\react-native-bluetooth-escpos-printer\android\src\main\java\cn\jystudio\bluetooth\tsc\TscCommand.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: F:\somnath\data_bank_mobile_api\node_modules\react-native-permissions\android\src\main\java\com\zoontek\rnpermissions\RNPermissionsPackage.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+e: java.nio.file.AccessDeniedException: C:\Users\User\AppData\Local\kotlin\daemon\kotlin-daemon-client-tsmarker4934810989333015161.tmp
+Note: F:\somnath\data_bank_mobile_api\node_modules\react-native-razorpay\android\src\main\java\com\razorpay\rn\RazorpayModule.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+e: java.nio.file.AccessDeniedException: C:\Users\User\AppData\Local\kotlin\daemon\kotlin-daemon-client-tsmarker3916299190316924649.tmp
+Note: F:\somnath\data_bank_mobile_api\node_modules\react-native-vector-icons\android\src\oldarch\java\com\oblador\vectoricons\VectorIconsModule.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+F:\somnath\data_bank_mobile_api\node_modules\react-native-safe-area-context\android\src\main\java\com\th3rdwave\safeareacontext\SafeAreaView.kt:58:23: warning: 'getter for uiImplementation: UIImplementation!' is deprecated. Deprecated in Java
+            uiManager.uiImplementation.dispatchViewUpdates(-1)
+                      ^
+Failed to construct transformer:  Error: spawn EPERM
+    at ChildProcess.spawn (node:internal/child_process:421:11)
+    at spawn (node:child_process:761:9)
+    at fork (node:child_process:172:10)
+    at ChildProcessWorker.initialize (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:133:45)
+    at new ChildProcessWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\workers\ChildProcessWorker.js:124:10)
+    at WorkerPool.createWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:44:12)
+    at new BaseWorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\base\BaseWorkerPool.js:127:27)
+    at new WorkerPool (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\WorkerPool.js:30:1)
+    at new Worker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\node_modules\jest-worker\build\index.js:167:26)
+    at HasteMap._getWorker (F:\somnath\data_bank_mobile_api\node_modules\metro-file-map\src\index.js:747:24) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'spawn'
+}
+error spawn EPERM
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\Screen.kt:77:22: warning: 'constructor GuardedRunnable(ReactContext!)' is deprecated. Deprecated in Java
+            object : GuardedRunnable(reactContext) {
+                     ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenStackFragment.kt:62:28: warning: 'setter for targetElevation: Float' is deprecated. Deprecated in Java
+            mAppBarLayout?.targetElevation = if (hidden) 0f else PixelUtil.toPixelFromDIP(4f)
+                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenStackFragment.kt:119:28: warning: 'setter for targetElevation: Float' is deprecated. Deprecated in Java
+            mAppBarLayout?.targetElevation = 0f
+                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenStackHeaderConfig.kt:85:34: warning: 'getter for systemWindowInsetTop: Int' is deprecated. Deprecated in Java
+                rootWindowInsets.systemWindowInsetTop
+                                 ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenStackHeaderConfig.kt:227:37: warning: 'setColorFilter(Int, PorterDuff.Mode): Unit' is deprecated. Deprecated in Java
+            toolbar.navigationIcon?.setColorFilter(mTintColor, PorterDuff.Mode.SRC_ATOP)
+                                    ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenWindowTraits.kt:64:22: warning: 'constructor GuardedRunnable(ReactContext!)' is deprecated. Deprecated in Java
+            object : GuardedRunnable(context) {
+                     ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenWindowTraits.kt:109:22: warning: 'constructor GuardedRunnable(ReactContext!)' is deprecated. Deprecated in Java
+            object : GuardedRunnable(context) {
+                     ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenWindowTraits.kt:118:43: warning: 'replaceSystemWindowInsets(Int, Int, Int, Int): WindowInsetsCompat' is deprecated. Deprecated in Java
+                            defaultInsets.replaceSystemWindowInsets(
+                                          ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenWindowTraits.kt:119:47: warning: 'getter for systemWindowInsetLeft: Int' is deprecated. Deprecated in Java
+                                defaultInsets.systemWindowInsetLeft,
+                                              ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenWindowTraits.kt:121:47: warning: 'getter for systemWindowInsetRight: Int' is deprecated. Deprecated in Java
+                                defaultInsets.systemWindowInsetRight,
+                                              ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\ScreenWindowTraits.kt:122:47: warning: 'getter for systemWindowInsetBottom: Int' is deprecated. Deprecated in Java
+                                defaultInsets.systemWindowInsetBottom
+                                              ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\SearchBarManager.kt:100:22: warning: parameter 'view' is never used
+    fun setPlacement(view: SearchBarView, placeholder: String?) = Unit
+                     ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\SearchBarManager.kt:100:43: warning: parameter 'placeholder' is never used
+    fun setPlacement(view: SearchBarView, placeholder: String?) = Unit
+                                          ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\SearchBarView.kt:141:43: warning: parameter 'flag' is never used
+    fun handleToggleCancelButtonJsRequest(flag: Boolean) = Unit
+                                          ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderAttachedEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderAttachedEvent.kt:7:42: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class HeaderAttachedEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                         ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderAttachedEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderAttachedEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderBackButtonClickedEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderBackButtonClickedEvent.kt:7:51: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class HeaderBackButtonClickedEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                                  ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderBackButtonClickedEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderBackButtonClickedEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderDetachedEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderDetachedEvent.kt:7:42: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class HeaderDetachedEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                         ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderDetachedEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\HeaderDetachedEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenAppearEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenAppearEvent.kt:7:40: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class ScreenAppearEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                       ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenAppearEvent.kt:13:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenAppearEvent.kt:14:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDisappearEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDisappearEvent.kt:7:43: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class ScreenDisappearEvent(viewId: Int) : Event<ScreenDisappearEvent>(viewId) {
+                                          ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDisappearEvent.kt:13:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDisappearEvent.kt:14:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDismissedEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDismissedEvent.kt:7:43: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class ScreenDismissedEvent(viewId: Int) : Event<ScreenDismissedEvent>(viewId) {
+                                          ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDismissedEvent.kt:13:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenDismissedEvent.kt:17:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, args)
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenTransitionProgressEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenTransitionProgressEvent.kt:13:5: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+) : Event<ScreenAppearEvent?>(viewId) {
+    ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenTransitionProgressEvent.kt:22:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenTransitionProgressEvent.kt:27:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, map)
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillAppearEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillAppearEvent.kt:7:44: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class ScreenWillAppearEvent(viewId: Int) : Event<ScreenWillAppearEvent>(viewId) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillAppearEvent.kt:13:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillAppearEvent.kt:14:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillDisappearEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillDisappearEvent.kt:7:47: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class ScreenWillDisappearEvent(viewId: Int) : Event<ScreenWillDisappearEvent>(viewId) {
+                                              ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillDisappearEvent.kt:13:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\ScreenWillDisappearEvent.kt:14:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarBlurEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarBlurEvent.kt:7:41: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class SearchBarBlurEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarBlurEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarBlurEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarChangeTextEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarChangeTextEvent.kt:10:5: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+) : Event<ScreenAppearEvent>(viewId) {
+    ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarChangeTextEvent.kt:20:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarChangeTextEvent.kt:23:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, map)
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarCloseEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarCloseEvent.kt:7:42: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class SearchBarCloseEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                         ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarCloseEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarCloseEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarFocusEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarFocusEvent.kt:7:42: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class SearchBarFocusEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                         ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarFocusEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarFocusEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarOpenEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarOpenEvent.kt:7:41: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class SearchBarOpenEvent(viewId: Int) : Event<ScreenAppearEvent>(viewId) {
+                                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarOpenEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarOpenEvent.kt:18:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarSearchButtonPressEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarSearchButtonPressEvent.kt:7:81: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class SearchBarSearchButtonPressEvent(viewId: Int, private val text: String?) : Event<ScreenAppearEvent>(viewId) {
+                                                                                ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarSearchButtonPressEvent.kt:17:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\SearchBarSearchButtonPressEvent.kt:20:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, map)
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\StackFinishTransitioningEvent.kt:5:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+import com.facebook.react.uimanager.events.RCTEventEmitter
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\StackFinishTransitioningEvent.kt:7:52: warning: 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
+class StackFinishTransitioningEvent(viewId: Int) : Event<StackFinishTransitioningEvent>(viewId) {
+                                                   ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\StackFinishTransitioningEvent.kt:13:44: warning: 'RCTEventEmitter' is deprecated. Deprecated in Java
+    override fun dispatch(rctEventEmitter: RCTEventEmitter) {
+                                           ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\main\java\com\swmansion\rnscreens\events\StackFinishTransitioningEvent.kt:14:25: warning: 'receiveEvent(Int, String!, WritableMap?): Unit' is deprecated. Deprecated in Java
+        rctEventEmitter.receiveEvent(viewTag, eventName, Arguments.createMap())
+                        ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\paper\java\com\swmansion\rnscreens\FabricEnabledViewGroup.kt:7:42: warning: parameter 'width' is never used
+    protected fun updateScreenSizeFabric(width: Int, height: Int) {
+                                         ^
+F:\somnath\data_bank_mobile_api\node_modules\react-native-screens\android\src\paper\java\com\swmansion\rnscreens\FabricEnabledViewGroup.kt:7:54: warning: parameter 'height' is never used
+    protected fun updateScreenSizeFabric(width: Int, height: Int) {
+                                                     ^
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:createBundleReleaseJsAndAssets'.
+> Process 'command 'cmd'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2m 13s

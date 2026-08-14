@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { BluetoothEscposPrinter } from "react-native-bluetooth-escpos-printer"
 import { AppStore } from "../Context/AppContext"
+import { IMG_URL } from "../Config/config"
+import { getBase64FromUrl } from "../Functions/getBase64FromUrl"
 
 export const printAgentInfo = async () => {
   const {
@@ -11,9 +13,26 @@ export const printAgentInfo = async () => {
     totalCollection,
     getTotalDepositAmount,
     login,
+    logo_path,
   } = useContext(AppStore)
 
   try {
+    await BluetoothEscposPrinter.printerAlign(
+      BluetoothEscposPrinter.ALIGN.CENTER,
+    )
+    if (logo_path) {
+      const _imgUrl = IMG_URL + logo_path
+      const _imgBase64 = await getBase64FromUrl(_imgUrl)
+      if (_imgBase64) {
+        await BluetoothEscposPrinter.printPic(_imgBase64, {
+          width: 150,
+          align: "center",
+          left: 15,
+        })
+        await BluetoothEscposPrinter.printText("\r\n", {})
+      }
+    }
+
     await BluetoothEscposPrinter.printerAlign(
       BluetoothEscposPrinter.ALIGN.CENTER,
     )

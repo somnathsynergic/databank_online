@@ -23,10 +23,11 @@ import InputComponent from "../../Components/InputComponent"
 import ButtonComponent from "../../Components/ButtonComponent"
 import axios from "axios"
 import { AppStore } from "../../Context/AppContext"
-import { REACT_APP_BASE_URL } from "../../Config/config"
+import { REACT_APP_BASE_URL, IMG_URL } from "../../Config/config"
 import mainNavigationRoutes from "../../Routes/NavigationRoutes"
 import { StackActions } from "@react-navigation/native"
 import { address } from "../../Routes/addresses"
+import { getBase64FromUrl } from "../../Functions/getBase64FromUrl"
 import { logo } from "../../Resources/ImageStrings/logo"
 import { gle } from "../../Resources/ImageStrings/gle"
 import { glej } from "../../Resources/ImageStrings/glej"
@@ -55,6 +56,8 @@ const LoanAccountPreviewScreen = ({ navigation, route }) => {
     secAmtType,
     bankId,
     branchCode,
+    printOp,
+    logo_path,
   } = useContext(AppStore)
   const { item, money } = route.params
 
@@ -67,10 +70,10 @@ const LoanAccountPreviewScreen = ({ navigation, route }) => {
       item?.acc_type == "D"
         ? "Daily"
         : item?.acc_type == "R"
-        ? "RD"
-        : item?.acc_type == "L"
-        ? "Loan"
-        : "",
+          ? "RD"
+          : item?.acc_type == "L"
+            ? "Loan"
+            : "",
     ],
     ["A/c No.", item?.account_number],
     ["Name", item?.customer_name],
@@ -88,7 +91,7 @@ const LoanAccountPreviewScreen = ({ navigation, route }) => {
   const netTotalSectionTableData = [
     ["Tnx. Date", new Date(todayDateFromServer).toLocaleDateString("en-GB")],
     ["Deposit Amt.", money],
-    ["Current Balance", item?.current_balance - parseFloat(money)],
+    ["Current Balance", +item?.current_balance - parseFloat(money)],
   ]
 
   const resetAction = StackActions.popToTop()
@@ -144,7 +147,7 @@ const LoanAccountPreviewScreen = ({ navigation, route }) => {
       account_type: item?.acc_type,
       product_code: item?.product_code,
       account_number: item?.account_number,
-      total_amount: item?.current_balance - parseFloat(money),
+      total_amount: +item?.current_balance - parseFloat(money),
       deposit_amount: parseFloat(money),
       collection_by: id,
       sec_amt_type: secAmtType,
@@ -217,128 +220,290 @@ const LoanAccountPreviewScreen = ({ navigation, route }) => {
   }
 
   async function printReceipt(rcptNo) {
-    try {
-      await BluetoothEscposPrinter.printerAlign(
-        BluetoothEscposPrinter.ALIGN.CENTER,
-      )
-      await BluetoothEscposPrinter.printText(bankName, { align: "center" })
-      await BluetoothEscposPrinter.printText("\r\n", {})
-      await BluetoothEscposPrinter.printText(branchName, { align: "center" })
-      await BluetoothEscposPrinter.printText("\r\n", {})
+    if (printOp == 2) {
+      try {
+        await BluetoothEscposPrinter.printerAlign(
+          BluetoothEscposPrinter.ALIGN.CENTER,
+        )
+        if (logo_path) {
+          const _imgUrl = IMG_URL + logo_path
+          const _imgBase64 = await getBase64FromUrl(_imgUrl)
+          if (_imgBase64) {
+            await BluetoothEscposPrinter.printPic(_imgBase64, {
+              width: 150,
+              align: "center",
+              left: 15,
+            })
+            await BluetoothEscposPrinter.printText("\r\n", {})
+          }
+        }
 
-      await BluetoothEscposPrinter.printText("CUSTOMER RECEIPT", {
-        align: "center",
-      })
+        await BluetoothEscposPrinter.printerAlign(
+          BluetoothEscposPrinter.ALIGN.CENTER,
+        )
+        await BluetoothEscposPrinter.printText(bankName + '\r\n', { align: "center" })
+        // await BluetoothEscposPrinter.printText("\r\n", {})
+        await BluetoothEscposPrinter.printText(branchName + '\r\n', { align: "center" })
+        // await BluetoothEscposPrinter.printText("\r\n", {})
 
-      await BluetoothEscposPrinter.printText("\r", {})
+        await BluetoothEscposPrinter.printText("CUSTOMER RECEIPT\n", {
+          align: "center",
+        })
 
-      // await BluetoothEscposPrinter.printPic(logo, { width: 300, align: "center", left: 30 })
+        // await BluetoothEscposPrinter.printText("\r\n", {})
 
-      await BluetoothEscposPrinter.printText(
-        "-------------------------------",
-        {},
-      )
-      await BluetoothEscposPrinter.printText("\r\n", {})
+        await BluetoothEscposPrinter.printText(
+          "-------------------------------\n",
+          {},
+        )
+        // await BluetoothEscposPrinter.printText("\r\n", {})
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        ["RCPT. No. : " + rcptNo],
-        {},
-      )
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["RCPT. No. : " + rcptNo],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        ["Acc. No. : " + item?.account_number],
-        {},
-      )
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Acc. No. : " + item?.account_number],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        ["Name: " + item?.customer_name],
-        {},
-      )
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Name: " + item?.customer_name],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        ["Previous Bal. : " + item?.current_balance],
-        {},
-      )
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Previous Bal. : " + item?.current_balance],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        ["Deposit Amt. : " + money],
-        {},
-      )
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Deposit Amt. : " + money],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        [
-          "Current Bal. : " +
-            parseFloat(item?.current_balance - parseFloat(money)),
-        ],
-        {},
-      )
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          [
+            "Current Bal. : " +
+            parseFloat(+item?.current_balance - parseFloat(money)),
+          ],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        [
-          "Tnx. Datetime: " +
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          [
+            "Tnx. Datetime: " +
             new Date(todayDT).toLocaleDateString("en-GB") +
             ", " +
             new Date(todayDT).toLocaleTimeString("en-GB"),
-        ],
-        {},
-      )
+          ],
+          {},
+        )
 
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        [
-          "PRV TNX DT : " + lastTnxDate
-            ? new Date(lastTnxDate)
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          [
+            "PRV TNX DT : " + lastTnxDate
+              ? new Date(lastTnxDate)
                 .toLocaleDateString("en-GB", {
                   day: "2-digit",
                   month: "2-digit",
                   year: "2-digit",
                 })
                 .toString()
-            : "No date.",
-        ],
-        {},
+              : "No date.",
+          ],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [30],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Collected By (Code) : " + userId],
+          {},
+        )
+
+        // await BluetoothEscposPrinter.printText("\r\n", {})
+
+        // await BluetoothEscposPrinter.printText("\r\n", {})
+        await BluetoothEscposPrinter.printText(
+          "---------------X---------------\n\n",
+          {},
+        )
+
+        // await BluetoothEscposPrinter.printText("\r\n", {})
+      } catch (e) {
+        console.log(e.message || "ERROR")
+        // ToastAndroid.showWithGravityAndOffset(
+        //   "Printer not connected.",
+        //   ToastAndroid.SHORT,
+        //   ToastAndroid.CENTER,
+        //   25,
+        //   50,
+        // )
+      }
+    } else if (printOp == 3) {
+      try {
+        await BluetoothEscposPrinter.printerAlign(
+          BluetoothEscposPrinter.ALIGN.CENTER,
+        )
+        if (logo_path) {
+          const _imgUrl = IMG_URL + logo_path
+          const _imgBase64 = await getBase64FromUrl(_imgUrl)
+          if (_imgBase64) {
+            await BluetoothEscposPrinter.printPic(_imgBase64, {
+              width: 150,
+              align: "center",
+              left: 80,
+            })
+            await BluetoothEscposPrinter.printText("\r\n", {})
+          }
+        }
+
+        await BluetoothEscposPrinter.printerAlign(
+          BluetoothEscposPrinter.ALIGN.CENTER,
+        )
+        await BluetoothEscposPrinter.printText(bankName, { align: "center" })
+        await BluetoothEscposPrinter.printText("\r\n", {})
+        await BluetoothEscposPrinter.printText(branchName, { align: "center" })
+        await BluetoothEscposPrinter.printText("\r\n", {})
+
+        await BluetoothEscposPrinter.printText("CUSTOMER RECEIPT", {
+          align: "center",
+        })
+
+        await BluetoothEscposPrinter.printText("\r", {})
+
+        await BluetoothEscposPrinter.printText(
+          "------------------------------------------------",
+          {},
+        )
+        await BluetoothEscposPrinter.printText("\r\n", {})
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["RCPT. No. : " + rcptNo],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Acc. No. : " + item?.account_number],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Name: " + item?.customer_name],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Previous Bal. : " + item?.current_balance],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Deposit Amt. : " + money],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          [
+            "Current Bal. : " +
+            parseFloat(+item?.current_balance - parseFloat(money)),
+          ],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          [
+            "Tnx. Datetime: " +
+            new Date(todayDT).toLocaleDateString("en-GB") +
+            ", " +
+            new Date(todayDT).toLocaleTimeString("en-GB"),
+          ],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          [
+            "PRV TNX DT : " + lastTnxDate
+              ? new Date(lastTnxDate)
+                .toLocaleDateString("en-GB", {
+                  day: "2-digit",
+                  month: "2-digit",
+                  year: "2-digit",
+                })
+                .toString()
+              : "No date.",
+          ],
+          {},
+        )
+
+        await BluetoothEscposPrinter.printColumn(
+          [48],
+          [BluetoothEscposPrinter.ALIGN.LEFT],
+          ["Collected By (Code) : " + userId],
+          {},
+        )
+
+        // await BluetoothEscposPrinter.printText("\r\n", {})
+
+        // await BluetoothEscposPrinter.printText("\r\n", {})
+        await BluetoothEscposPrinter.printText(
+          "----------------------X----------------------",
+          {},
+        )
+
+        await BluetoothEscposPrinter.printText("\r\n", {})
+      } catch (e) {
+        console.log(e.message || "ERROR")
+        // ToastAndroid.showWithGravityAndOffset(
+        //   "Printer not connected.",
+        //   ToastAndroid.SHORT,
+        //   ToastAndroid.CENTER,
+        //   25,
+        //   50,
+        // )
+      }
+    } else {
+      ToastAndroid.showWithGravityAndOffset(
+        "Invalid printer option selected.",
+        ToastAndroid.SHORT,
+        ToastAndroid.CENTER,
+        25,
+        50,
       )
-
-      await BluetoothEscposPrinter.printColumn(
-        [30],
-        [BluetoothEscposPrinter.ALIGN.LEFT],
-        ["Collected By (Code) : " + userId],
-        {},
-      )
-
-      // await BluetoothEscposPrinter.printText("\r\n", {})
-
-      // await BluetoothEscposPrinter.printText("\r\n", {})
-      await BluetoothEscposPrinter.printText(
-        "---------------X---------------",
-        {},
-      )
-
-      await BluetoothEscposPrinter.printText("\r\n\r\n\r\n", {})
-    } catch (e) {
-      console.log(e.message || "ERROR")
-      // ToastAndroid.showWithGravityAndOffset(
-      //   "Printer not connected.",
-      //   ToastAndroid.SHORT,
-      //   ToastAndroid.CENTER,
-      //   25,
-      //   50,
-      // )
     }
   }
 
@@ -346,9 +511,9 @@ const LoanAccountPreviewScreen = ({ navigation, route }) => {
     getTotalDepositAmount()
     console.log("##$$$$###$$$", maximumAmount, money, totalDepositedAmount)
     console.log("##$$$$+++++###$$$", money + totalDepositedAmount)
-    console.log("##$$$$+++++###$$$", typeof money, typeof totalDepositedAmount)
+    console.log("##$$$$+++++###$$$", typeof money, typeof totalDepositedAmount,typeof maximumAmount)
     console.log("##$$$$+++++###$$$", parseFloat(money) + totalDepositedAmount)
-    if (!(maximumAmount < parseFloat(money) + totalDepositedAmount)) {
+    if (+(maximumAmount) >=parseFloat(money) + (+totalDepositedAmount)) {
       setIsSaveEnabled(true)
       sendCollectedMoney()
     } else {

@@ -28,10 +28,11 @@ import InputComponent from "../../Components/InputComponent"
 import ButtonComponent from "../../Components/ButtonComponent"
 import axios from "axios"
 import { AppStore } from "../../Context/AppContext"
-import { REACT_APP_BASE_URL } from "../../Config/config"
+import { REACT_APP_BASE_URL, IMG_URL } from "../../Config/config"
 import mainNavigationRoutes from "../../Routes/NavigationRoutes"
 import { StackActions } from "@react-navigation/native"
 import { address } from "../../Routes/addresses"
+import { getBase64FromUrl } from "../../Functions/getBase64FromUrl"
 import { logo } from "../../Resources/ImageStrings/logo"
 import { gle } from "../../Resources/ImageStrings/gle"
 import { glej } from "../../Resources/ImageStrings/glej"
@@ -59,6 +60,7 @@ const AccountPreview = ({ navigation, route }) => {
     login,
     allowCollectionDays,
     secAmtType,
+    logo_path,
   } = useContext(AppStore)
   const { item, money } = route.params
   const tableData = [
@@ -178,6 +180,22 @@ const AccountPreview = ({ navigation, route }) => {
       await BluetoothEscposPrinter.printerAlign(
         BluetoothEscposPrinter.ALIGN.CENTER,
       )
+      if (logo_path) {
+        const _imgUrl = IMG_URL + logo_path
+        const _imgBase64 = await getBase64FromUrl(_imgUrl)
+        if (_imgBase64) {
+          await BluetoothEscposPrinter.printPic(_imgBase64, {
+            width: 150,
+            align: "center",
+            left: 15,
+          })
+          await BluetoothEscposPrinter.printText("\r\n", {})
+        }
+      }
+
+      await BluetoothEscposPrinter.printerAlign(
+        BluetoothEscposPrinter.ALIGN.CENTER,
+      )
       await BluetoothEscposPrinter.printText(bankName, { align: "center" })
       await BluetoothEscposPrinter.printText("\r\n", {})
       await BluetoothEscposPrinter.printText(branchName, { align: "center" })
@@ -188,8 +206,6 @@ const AccountPreview = ({ navigation, route }) => {
       })
 
       await BluetoothEscposPrinter.printText("\r", {})
-
-      // await BluetoothEscposPrinter.printPic(logo, { width: 300, align: "center", left: 30 })
 
       await BluetoothEscposPrinter.printText(
         "-------------------------------",
@@ -335,7 +351,7 @@ const AccountPreview = ({ navigation, route }) => {
         {},
       )
 
-      await BluetoothEscposPrinter.printText("\r\n\r\n\r\n", {})
+      await BluetoothEscposPrinter.printText("\r\n", {})
     } catch (e) {
       console.log(e.message || "ERROR")
       // ToastAndroid.showWithGravityAndOffset(

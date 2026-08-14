@@ -146,7 +146,7 @@ function ReportNo() {
             item.account_holder_name,
             item.deposit_amount,
           ]
-          totalDepositedAmount += item.deposit_amount
+          totalDepositedAmount += +item.deposit_amount
           console.log("ITEMMM TABLEEE=====", rowArr)
           tableData.push(...[rowArr])
         })
@@ -313,14 +313,14 @@ function ReportNo() {
                 setAccountType(item.value)
                 setFocusDrop(false)
               }}
-              // renderLeftIcon={() => (
-              //   <AntDesign
-              //     style={styles.icon}
-              //     color={isFocus ? 'blue' : 'black'}
-              //     name="Safety"
-              //     size={20}
-              //   />
-              // )}
+            // renderLeftIcon={() => (
+            //   <AntDesign
+            //     style={styles.icon}
+            //     color={isFocus ? 'blue' : 'black'}
+            //     name="Safety"
+            //     size={20}
+            //   />
+            // )}
             />
           </View>
 
@@ -345,7 +345,7 @@ function ReportNo() {
                 borderWidth: 2,
                 borderColor: COLORS.lightScheme.onTertiaryContainer,
                 borderRadius: 10,
-                
+
               }}
               style={{ backgroundColor: COLORS.lightScheme.onPrimary }}>
               <Row data={tableHead} textStyle={styles.head} />
