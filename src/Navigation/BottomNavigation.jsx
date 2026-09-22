@@ -76,6 +76,6 @@ export default BottomNavigation
 
 const styles = StyleSheet.create({
   image: {
-    borderRadius: 50,
+    borderRadius: 51,
   },
 })
